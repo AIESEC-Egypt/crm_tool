@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Platform Support</title>
+    <!-- PACE-->
+    <link rel="stylesheet" type="text/css" href="../plugins/PACE/themes/blue/pace-theme-flash.css">
+    <script type="text/javascript" src="../plugins/PACE/pace.min.js"></script>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="../plugins/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Fonts-->
+    <link rel="stylesheet" type="text/css" href="../plugins/themify-icons/themify-icons.css">
+    <!-- Malihu Scrollbar-->
+    <link rel="stylesheet" type="text/css" href="../plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+    <!-- Animo.js-->
+    <link rel="stylesheet" type="text/css" href="../plugins/animo.js/animate-animo.min.css">
+    <!-- Flag Icons-->
+    <link rel="stylesheet" type="text/css" href="../plugins/flag-icon-css/css/flag-icon.min.css">
+    <!-- Bootstrap Progressbar-->
+    <link rel="stylesheet" type="text/css" href="../plugins/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <!-- Primary Style-->
+    <link rel="stylesheet" type="text/css" href="../build/css/fourth-layout.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://--> 
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <style>
+      .ps-trigger-btn{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 5;
+      }
+      .ps-container{
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        display: none;
+      }
+      .ps-form-error{
+        display: none;
+      }
+    </style>
+
+    <div class="page-content container-fluid ps-container">
+      <div class="row">
+        <div class="col-3">
+          <div class="widget">
+            <div class="widget-heading">
+              <h3 class="widget-title">CONTACT PLATFORM SUPPORT</h3>
+            </div>
+            <div class="widget-body">
+              <form>
+                <div class="form-group">
+                  <label for="ps-name">Your Name<small class="text-danger">*</small></label>
+                  <input id="ps-name" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="ps-email">Your Email ID<small class="text-danger">*</small></label>
+                  <input id="ps-email" type="email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="ps-category">Support Type<small class="text-danger">*</small></label>
+                  <select id="ps-category" class="form-control">
+                    <option value="">------</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="ps-msg">Your message<small class="text-danger">*</small></label>
+                  <textarea id="ps-msg" rows="3" class="form-control" placeholder="Please explain what you need"></textarea>
+                </div>
+                <div>
+                <!-- 
+                <div class="form-group">
+                  <label for="passwordInput">Password input</label>
+                  <input id="passwordInput" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="textArea">Text area</label>
+                  <textarea id="textArea" rows="3" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="fileInput">File input</label>
+                  <input id="fileInput" type="file" data-buttonname="btn-outline btn-primary" data-iconname="ti-zip" class="filestyle">
+                </div>
+                <div class="form-group">
+                  <label for="selectBasic">Select basic</label>
+                  <select id="selectBasic" class="form-control">
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                    <option value="3">Option three</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="selectMultiple">Select multiple</label>
+                  <select id="selectMultiple" multiple="multiple" style="height: 100px; overflow-y: auto" class="form-control">
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                    <option value="3">Option three</option>
+                  </select>
+                </div>
+                <div class="checkbox-custom">
+                  <input id="multipleCheckbox1" type="checkbox" value="1">
+                  <label for="multipleCheckbox1">Option one</label>
+                </div>
+                <div class="checkbox-custom">
+                  <input id="multipleCheckbox2" type="checkbox" value="2">
+                  <label for="multipleCheckbox2">Option two</label>
+                </div>
+                <div class="checkbox-custom">
+                  <input id="multipleCheckbox3" type="checkbox" value="3">
+                  <label for="multipleCheckbox3">Option three</label>
+                </div>
+                <div class="radio-custom">
+                  <input id="optionsRadios1" type="radio" name="optionsRadios" value="1" checked>
+                  <label for="optionsRadios1">Option one</label>
+                </div>
+                <div class="radio-custom">
+                  <input id="optionsRadios2" type="radio" name="optionsRadios" value="2">
+                  <label for="optionsRadios2">Option two</label>
+                </div>
+                <div class="radio-custom">
+                  <input id="optionsRadios3" type="radio" name="optionsRadios" value="3">
+                  <label for="optionsRadios3">Option three</label>
+                </div>
+                  -->
+                </div>
+              </form>
+              <small class="text-danger ps-form-error">Kindly fill all the details!</small> <br><br>
+              <button class="btn btn-raised btn-success ps-submit-btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-raised btn-warning ps-trigger-btn">Platform Support</button>
+    
+    
+    
+    
+    <!-- jQuery-->
+    <script type="text/javascript" src="../plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript-->
+    <script type="text/javascript" src="../plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Malihu Scrollbar-->
+    <script type="text/javascript" src="../plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Animo.js-->
+    <script type="text/javascript" src="../plugins/animo.js/animo.min.js"></script>
+    <!-- Bootstrap Progressbar-->
+    <script type="text/javascript" src="../plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- jQuery Easy Pie Chart-->
+    <script type="text/javascript" src="../plugins/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <!-- Bootstrap FileStyle-->
+    <script type="text/javascript" src="../plugins/bootstrap-filestyle/src/bootstrap-filestyle.js"></script>
+    <!-- Custom JS-->
+    <script type="text/javascript" src="../build/js/fourth-layout/app.js"></script>
+    <script type="text/javascript" src="../build/js/fourth-layout/demo.js"></script>
+
+
+    <script>
+      $('.ps-trigger-btn').click(() => {
+        var ps_container = $('.ps-container')
+        if(ps_container.css('display') == 'block') {
+          ps_container.css('display','none');
+        } else {
+          ps_container.css('display','block');
+          fetchRequestCategories();
+        }
+      })
+
+
+
+      function fetchRequestCategories() {
+        var username = "endpointauth";
+        var mutation = "{externalLogin(username:\"" + username + "\"){token}}";
+        
+        var url_auth_raw = "https://alpha.aiesec.org.eg/graphql?query=mutation" + mutation;
+        var url_auth_encoded = encodeURI(url_auth_raw);
+        $.ajax({
+          url: url_auth_encoded,
+          type: 'post',
+          success: function(data){
+            var token_auth = "JWT " + data["data"]["externalLogin"]["token"];
+            var query = "{ allCustomerrequestcategories { edges { node { pk name }}}}";
+            var url_raw = 'https://alpha.aiesec.org.eg/graphql?query=' + query;
+            var url_encoded = encodeURI(url_raw);
+            $.ajax({
+              url: url_encoded,
+              type: 'post',
+              headers: {
+                'Authorization': token_auth
+              },
+              success: function(data){
+                var ps_category_list = data["data"]["allCustomerrequestcategories"]["edges"];
+                for(var i = 0; i < ps_category_list.length; i++) {
+                  var new_option = new Option(ps_category_list[i]["node"]["name"], ps_category_list[i]["node"]["pk"]);
+                  $(new_option).html(ps_category_list[i]["node"]["name"]);
+                  $("#ps-category").append(new_option);
+                }
+              },
+              async: true
+            })
+          },
+          async: true
+        })
+      }
+
+
+
+
+      $('.ps-submit-btn').click(() => {
+        var name = $('#ps-name').val();
+        var email = $('#ps-email').val();
+        var category = $('#ps-category').val();
+        var msg = $('#ps-msg').val();
+        if( name && email && category && msg) {
+          $('.ps-form-error').css('display', 'none');
+          $('.ps-submit-btn').addClass('disabled');
+          submitPlatformSupportRequest(name, email, category, msg);
+        } else {
+          $('.ps-submit-btn').removeClass('disabled');
+          $('.ps-form-error').css('display', 'block');
+        }
+      });
+
+
+
+      function submitPlatformSupportRequest(name, email, category, msg) {
+
+        var platform_index = 3;
+
+
+        var username = "endpointauth";
+        var mutation = "{externalLogin(username:\"" + username + "\"){token}}";
+        
+        var url_auth_raw = "https://alpha.aiesec.org.eg/graphql?query=mutation" + mutation;
+        var url_auth_encoded = encodeURI(url_auth_raw);
+        $.ajax({
+          url: url_auth_encoded,
+          type: 'post',
+          success: function(data){
+            var token_auth = "JWT " + data["data"]["externalLogin"]["token"];
+            var query = "{ addCustomerRequest ( input: { name: \"" + name + "\" email: \"" + email + "\" msg: \"" + msg + "\" category: " + category + " platform: " + platform_index + " }){ myCustomerrequest { id }}}";
+            var url_raw = 'https://alpha.aiesec.org.eg/graphql?query=mutation' + query;
+            var url_encoded = encodeURI(url_raw);
+            $.ajax({
+              url: url_encoded,
+              type: 'post',
+              headers: {
+                'Authorization': token_auth
+              },
+              success: function(data){
+                var ps_response = data;
+                $('.ps-submit-btn').removeClass('disabled');
+                $('.ps-form-error').css('display', 'none');
+                $('#ps-name').val('');
+                $('#ps-email').val('');
+                $('#ps-category').val('');
+                $('#ps-msg').val('');
+                alert('Your request has been recorded. It would be resolved soon.')
+              },
+              async: true
+            })
+          },
+          async: true
+        })
+      }
+
+
+      
+
+    </script>
+
+
+  </body>
+</html>
