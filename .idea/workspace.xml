@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/crm_tool.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ams/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm_tool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm_tool/settings.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="0aff5e0d-eac7-45de-8cb2-22b5ad7410bd" />
+  <component name="ProjectId" id="1iPiAZ1dLbG4apM1DyXrcYoexQy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="crm_tool" type="Python.DjangoServer" factoryName="Django server">
+      <module name="crm_tool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="" />
+      <created>1601815486866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601815486866</updated>
+      <workItem from="1601815488117" duration="3831000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
