@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/scripts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm_tool/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm_tool/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blue-dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blue-dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +73,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601815486866</updated>
       <workItem from="1601815488117" duration="3831000" />
-      <workItem from="1601939663017" duration="14670000" />
+      <workItem from="1601939663017" duration="15678000" />
+      <workItem from="1602791603634" duration="2513000" />
     </task>
     <servers />
   </component>
