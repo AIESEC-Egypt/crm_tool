@@ -1,6 +1,6 @@
 from django.db import models
 # Create your models here.
-class Parent_Entity_ID(models.Model):
+
 class Meeting_ID(models.Model):
     meeting_id=models.UUIDField(editable=False)    
 class Atom_ID(models.Model):
@@ -13,7 +13,6 @@ class Enabler(models.Model):
     name=models.CharField(max_length=100)
 
 class Entity(models.Model):
-    
     application_id = models.ForeignKey(Application_ID,on_delete=models.CASCADE)
 class Opportunity(models.Model):
     op_id=models.UUIDField(primary_key=True)
