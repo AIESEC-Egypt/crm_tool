@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/general/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/migrations/0002_auto_20201016_0249.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/migrations/0003_auto_20201016_0307.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/migrations/0004_member_full_name.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
