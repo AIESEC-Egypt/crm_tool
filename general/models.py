@@ -187,7 +187,7 @@ class Member(models.Model):
     languages = models.ManyToManyField(Language, null=True, blank=True)
     skills = models.ManyToManyField(Skill, null=True, blank=True)
     is_rxp = models.BooleanField(default=False)
-    operational_goals = models.ForeignKey(OperationalGoals, on_delete=models.CASCADE)
+    operational_goals = models.ForeignKey(OperationalGoals, on_delete=models.CASCADE, null=True, blank=True)
     status_choices = (
         ("1", 'Active Member'),
         ("2", 'Member on IXP'),
