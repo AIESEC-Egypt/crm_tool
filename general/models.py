@@ -1,10 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
-from opportunities.models import Opportunity
+from opportunities.models import *
+
 # Create your models here.
-from django.db.models import Count
-
-
 
 
 class Entity(models.Model):
@@ -14,7 +12,6 @@ class Entity(models.Model):
 
     def __str__(self):
         return self.name
-
 
 
 class Address(models.Model):
@@ -105,8 +102,8 @@ class Member(models.Model):
     department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
     # applications
     role = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)
-    managed_eps = models.ManyToManyField(Opportunity, null=True, blank=True)
-    # managed_ops
+    managed_ops = models.ManyToManyField('opportunities.Opportunity', null=True, blank=True)
+    # managed_eps
     # managed_enablers
     # managed_partners
     backgrounds = models.ManyToManyField(Background, null=True, blank=True)
