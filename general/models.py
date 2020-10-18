@@ -36,6 +36,28 @@ class Department(models.Model):
 
 class Role(models.Model):
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    level = (
+        ("1", 'Member'),
+        ("2", 'Coordinator'),
+        ("3", 'LCVP'),
+        ("4", 'LCP'),
+        ("5", 'EDT'),
+        ("6", 'EDT TL'),
+        ("7", 'RST'),
+        ("8", 'GST'),
+        ("9", 'ECB Chair'),
+        ("10", 'ECB Director'),
+        ("11", 'ECB Member'),
+        ("12", 'EFB Chair'),
+        ("13", 'EFB Director'),
+        ("14", 'EFB Member'),
+        ("15", 'MCVP'),
+        ("16", 'MCP'),
+        ("17", 'Alumnus')
+        ("xx", 'Other'),
+
+    )
+    hierarchy = models.CharField(max_length = 1, choices = level, default = 'Other')
     lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
     is_leading_a_team = models.BooleanField(default=False)
     start_date = models.DateTimeField(null=True, blank=True)
@@ -89,7 +111,7 @@ class Member(models.Model):
     last_name = models.CharField(max_length=100, null=True, blank=True)
     full_name = models.CharField(max_length=250, null=True, blank=True)
     dob = models.DateField(null=True, blank=True)
-    lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
+    lc = models.ForeignKey(Entity, on_delete=models.DO_NOTHING, null=True, blank=True)
     gender = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=250, null=True, blank=True)
     whatsapp = models.CharField(max_length=250, null=True, blank=True)
@@ -99,9 +121,9 @@ class Member(models.Model):
     instagram = models.CharField(max_length=250, null=True, blank=True)
     address = models.ForeignKey(Address, on_delete=models.CASCADE, null=True, blank=True)
     is_ixp = models.BooleanField(default=False)
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
+    department = models.OneToOneField(Department, on_delete=models.DO_NOTHING, null=True, blank=True)
     # applications
-    role = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)
+    role = models.ManyToManyField(Role, null=True, blank=True)
     managed_ops = models.ManyToManyField('opportunities.Opportunity', null=True, blank=True)
     # managed_eps
     # managed_enablers
@@ -112,22 +134,26 @@ class Member(models.Model):
     is_rxp = models.BooleanField(default=False)
     # operational_goals
     status_choices = (
-        (1, 'Active Member'),
-        (2, 'Member on IXP'),
-        (3, 'Resigned'),
-        (4, 'Dismissed'),
-        (5, 'Under Probation'),
-        (6, 'Alumnus')
+        ("1", 'Active Member'),
+        ("2", 'Member on IXP'),
+        ("3", 'Resigned'),
+        ("4", 'Dismissed'),
+        ("5", 'Under Probation'),
+        ("6", 'Alumnus')
     )
     member_status = models.CharField(max_length = 1, choices = status_choices, default = 'Active Member')
     reason_of_leaving = models.TextField(blank = True, null = True)
 
     membership_cycles = models.IntegerField(null=True, blank=True, default=0)
-    completed_one_membership_cycle = models.BooleanField(default=False)
+    completed_atleast_one_membership_cycle = models.BooleanField(default=False)
 
-    # pipeline
-    # touch_points
+    # Touchpoints
+
+    number_of_touchpoints_hosted = models.IntegerField(null=True, blank=True, default=0)
+    number_of_touchpoints_attended = models.IntegerField(null=True, blank=True, default=0)
+    number_of_touchpoints_required_to_attend = models.IntegerField(null=True, blank=True, default=0)
     managed_applcations_count = models.IntegerField(null=True, blank=True, default=0)
+
     managed_opportunities_count = models.IntegerField(null=True, blank=True, default=0)
     managed_eps_count = models.IntegerField(null=True, blank=True, default=0)
     managed_enablers_count = models.IntegerField(null=True, blank=True, default=0)
@@ -146,9 +172,54 @@ class Member(models.Model):
     # operational_status
     tags = models.ManyToManyField(Tag, blank=True, null=True)
 
+
+
     def save(self, *args, **kwargs):
         self.full_name = "{} {}".format(self.first_name, self.last_name)
+
+        if self.membership_cycles == 0:
+            self.completed_atleast_one_membership_cycle = False
+        else:
+            self.completed_atleast_one_membership_cycle = True
         super(Member, self).save(*args, **kwargs)
+
 
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)
+
+
+class TouchPoints(models.Model):
+    meeting_host = models.OneToOneField(Member, on_delete=models.DO_NOTHING)
+    meeting_host_entity = models.OneToOneField(Entity, on_delete=models.DO_NOTHING)
+    meeting_id = models.IntegerField(null=True, blank=True, default=0)
+    start_date_time = models.DateTimeField(null=True, blank=True)
+    end_date_time = models.DateTimeField(null=True, blank=True)
+    meeting_name = models.CharField(max_length = 250, null = True, blank = True, default = 0)
+    meeting_types = (
+        ("1", 'National Conference'),
+        ("2", 'Local Conference'),
+        ("3", 'LCM'),
+        ("4", 'MCM'),
+        ("5", 'Comission Meeting'),
+        ("6", 'Functional Visit'),
+        ("7", 'OD Visit'),
+        ("8", 'o2o'),
+        ("9", 'Comission Meeting'),
+        ("10", 'Functional Meeting'),
+        ("11", 'TLs Meeting'),
+        ("12", 'EB Meeting'),
+        ("13", 'Management Team Meeting'),
+        ("14", 'OD Meeting'),
+        ("15", 'OPS Meeting'),
+        ("16", 'Brand Meeting'),
+        ("17", 'Finance Meeting'),
+        ("18", 'EDTs Meeting'),
+        ("19", 'IR Meeting'),
+        ("20", 'LC Outing'),
+        ("21", 'Teamdays'),
+        ("XX", 'Other')
+    )
+
+    meeting_type = models.CharField(max_length = 1, choices = meeting_types, default = 'Other')
+    audience = models.OneToOneField(Role, on_delete=models.DO_NOTHING)
+
