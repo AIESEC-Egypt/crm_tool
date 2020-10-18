@@ -53,7 +53,8 @@ class Skill(models.Model):
     level = models.IntegerField(null=True, blank=True)
     expa_id = models.IntegerField(null=True, blank=True, default=0)
     def __str__(self):
-        return self.name
+        return self.skill
+
 
 class Language(models.Model):
     expa_id = models.IntegerField(null=True, blank=True, default=0)
@@ -62,7 +63,6 @@ class Language(models.Model):
 
     def __str__(self):
         return self.name
-
 
 
 class Background(models.Model):
