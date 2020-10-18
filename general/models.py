@@ -53,7 +53,7 @@ class Role(models.Model):
         ("14", 'EFB Member'),
         ("15", 'MCVP'),
         ("16", 'MCP'),
-        ("17", 'Alumnus')
+        ("17", 'Alumnus'),
         ("xx", 'Other'),
 
     )
@@ -103,15 +103,70 @@ class Tag(models.Model):
         return self.tag
 
 
+class TouchPoints(models.Model):
+    meeting_host_entity = models.ForeignKey(Entity, on_delete=models.CASCADE)
+    meeting_id = models.IntegerField(null=True, blank=True, default=0)
+    start_date_time = models.DateTimeField(null=True, blank=True)
+    end_date_time = models.DateTimeField(null=True, blank=True)
+    meeting_name = models.CharField(max_length = 250, null = True, blank = True, default = 0)
+    meeting_types = (
+        ("1", 'National Conference'),
+        ("2", 'Local Conference'),
+        ("3", 'LCM'),
+        ("4", 'MCM'),
+        ("5", 'Comission Meeting'),
+        ("6", 'Functional Visit'),
+        ("7", 'OD Visit'),
+        ("8", 'o2o'),
+        ("9", 'Comission Meeting'),
+        ("10", 'Functional Meeting'),
+        ("11", 'TLs Meeting'),
+        ("12", 'EB Meeting'),
+        ("13", 'Management Team Meeting'),
+        ("14", 'OD Meeting'),
+        ("15", 'OPS Meeting'),
+        ("16", 'Brand Meeting'),
+        ("17", 'Finance Meeting'),
+        ("18", 'EDTs Meeting'),
+        ("19", 'IR Meeting'),
+        ("20", 'LC Outing'),
+        ("21", 'Teamdays'),
+        ("XX", 'Other')
+    )
+
+    meeting_type = models.CharField(max_length = 1, choices = meeting_types, default = 'Other')
+    audience = models.ForeignKey(Role, on_delete=models.CASCADE)
+
+
+
+class OperationalGoals:
+    goal_type = (
+        ("1", 'Sign UPs'),
+        ("2", 'Applied'),
+        ("3", 'Accepted'),
+        ("4", 'Approved'),
+        ("5", 'Realized'),
+        ("6", 'Finished'),
+        ("7", 'Complete'),
+        ("XX", "Choose a type")
+    )
+    goal = models.CharField(max_length = 1, choices = goal_type, default = 'XX')
+    number = models.IntegerField(null=True, blank=True, default=0)
+
+    def __str__(self):
+        return "{} {}".format(self.number, self.goal)
+
+
+
 class Member(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     expa_id = models.IntegerField(null=True, blank=True, default=0)
     atom_id = models.IntegerField(null=True, blank=True, default=0)
     first_name = models.CharField(max_length=100, null=True, blank=True)
     last_name = models.CharField(max_length=100, null=True, blank=True)
     full_name = models.CharField(max_length=250, null=True, blank=True)
     dob = models.DateField(null=True, blank=True)
-    lc = models.ForeignKey(Entity, on_delete=models.DO_NOTHING, null=True, blank=True)
+    lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
     gender = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=250, null=True, blank=True)
     whatsapp = models.CharField(max_length=250, null=True, blank=True)
@@ -121,7 +176,7 @@ class Member(models.Model):
     instagram = models.CharField(max_length=250, null=True, blank=True)
     address = models.ForeignKey(Address, on_delete=models.CASCADE, null=True, blank=True)
     is_ixp = models.BooleanField(default=False)
-    department = models.OneToOneField(Department, on_delete=models.DO_NOTHING, null=True, blank=True)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
     # applications
     role = models.ManyToManyField(Role, null=True, blank=True)
     managed_ops = models.ManyToManyField('opportunities.Opportunity', null=True, blank=True)
@@ -132,7 +187,7 @@ class Member(models.Model):
     languages = models.ManyToManyField(Language, null=True, blank=True)
     skills = models.ManyToManyField(Skill, null=True, blank=True)
     is_rxp = models.BooleanField(default=False)
-    # operational_goals
+    operational_goals = models.ForeignKey(OperationalGoals, on_delete=models.CASCADE)
     status_choices = (
         ("1", 'Active Member'),
         ("2", 'Member on IXP'),
@@ -146,9 +201,7 @@ class Member(models.Model):
 
     membership_cycles = models.IntegerField(null=True, blank=True, default=0)
     completed_atleast_one_membership_cycle = models.BooleanField(default=False)
-
-    # Touchpoints
-
+    touchpoints = models.ForeignKey(TouchPoints, on_delete=models.CASCADE)
     number_of_touchpoints_hosted = models.IntegerField(null=True, blank=True, default=0)
     number_of_touchpoints_attended = models.IntegerField(null=True, blank=True, default=0)
     number_of_touchpoints_required_to_attend = models.IntegerField(null=True, blank=True, default=0)
@@ -183,43 +236,7 @@ class Member(models.Model):
             self.completed_atleast_one_membership_cycle = True
         super(Member, self).save(*args, **kwargs)
 
-
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)
 
-
-class TouchPoints(models.Model):
-    meeting_host = models.OneToOneField(Member, on_delete=models.DO_NOTHING)
-    meeting_host_entity = models.OneToOneField(Entity, on_delete=models.DO_NOTHING)
-    meeting_id = models.IntegerField(null=True, blank=True, default=0)
-    start_date_time = models.DateTimeField(null=True, blank=True)
-    end_date_time = models.DateTimeField(null=True, blank=True)
-    meeting_name = models.CharField(max_length = 250, null = True, blank = True, default = 0)
-    meeting_types = (
-        ("1", 'National Conference'),
-        ("2", 'Local Conference'),
-        ("3", 'LCM'),
-        ("4", 'MCM'),
-        ("5", 'Comission Meeting'),
-        ("6", 'Functional Visit'),
-        ("7", 'OD Visit'),
-        ("8", 'o2o'),
-        ("9", 'Comission Meeting'),
-        ("10", 'Functional Meeting'),
-        ("11", 'TLs Meeting'),
-        ("12", 'EB Meeting'),
-        ("13", 'Management Team Meeting'),
-        ("14", 'OD Meeting'),
-        ("15", 'OPS Meeting'),
-        ("16", 'Brand Meeting'),
-        ("17", 'Finance Meeting'),
-        ("18", 'EDTs Meeting'),
-        ("19", 'IR Meeting'),
-        ("20", 'LC Outing'),
-        ("21", 'Teamdays'),
-        ("XX", 'Other')
-    )
-
-    meeting_type = models.CharField(max_length = 1, choices = meeting_types, default = 'Other')
-    audience = models.OneToOneField(Role, on_delete=models.DO_NOTHING)
 
