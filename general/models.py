@@ -57,7 +57,7 @@ class Role(models.Model):
         ("xx", 'Other'),
 
     )
-    hierarchy = models.CharField(max_length = 1, choices = level, default = 'Other')
+    hierarchy = models.CharField(max_length = 2, choices = level, default = 'Other')
     lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True)
     is_leading_a_team = models.BooleanField(default=False)
     start_date = models.DateTimeField(null=True, blank=True)
@@ -68,6 +68,9 @@ class Role(models.Model):
     # nps
     # pipeline
     # team_standards
+
+    def __str__(self):
+        return self.hierarchy
 
 
 class Skill(models.Model):
@@ -134,22 +137,22 @@ class TouchPoints(models.Model):
         ("XX", 'Other')
     )
 
-    meeting_type = models.CharField(max_length = 1, choices = meeting_types, default = 'Other')
+    meeting_type = models.CharField(max_length = 2, choices = meeting_types, default = 'Other')
     audience = models.ForeignKey(Role, on_delete=models.CASCADE)
 
 
 class OperationalGoal(models.Model):
     goal_type = (
-        ("1", 'Sign UPs'),
-        ("2", 'Applied'),
-        ("3", 'Accepted'),
-        ("4", 'Approved'),
-        ("5", 'Realized'),
-        ("6", 'Finished'),
-        ("7", 'Complete'),
+        ("SU", 'Sign UPs'),
+        ("APL", 'Applied'),
+        ("ACC", 'Accepted'),
+        ("APD", 'Approved'),
+        ("RE", 'Realized'),
+        ("FI", 'Finished'),
+        ("CO", 'Complete'),
         ("XX", "Choose a type")
     )
-    goal = models.CharField(max_length = 1, choices = goal_type, default = 'XX')
+    goal = models.CharField(max_length = 3, choices = goal_type, default = 'XX')
     number = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
@@ -200,7 +203,7 @@ class Member(models.Model):
 
     membership_cycles = models.IntegerField(null=True, blank=True, default=0)
     completed_atleast_one_membership_cycle = models.BooleanField(default=False)
-    touchpoints = models.ForeignKey(TouchPoints, on_delete=models.CASCADE)
+    touchpoints = models.ForeignKey(TouchPoints, on_delete=models.CASCADE, null=True)
     number_of_touchpoints_hosted = models.IntegerField(null=True, blank=True, default=0)
     number_of_touchpoints_attended = models.IntegerField(null=True, blank=True, default=0)
     number_of_touchpoints_required_to_attend = models.IntegerField(null=True, blank=True, default=0)

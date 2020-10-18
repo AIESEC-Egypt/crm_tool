@@ -24,7 +24,7 @@ class Opportunity(models.Model):
     sdg = models.CharField(max_length = 200, null = True, blank=True)
     sub_product = models.CharField(max_length = 200, null = True, blank=True)
     slot = models.ManyToManyField(Slot, null=True, blank=True)
-    op_manager = models.ManyToManyField('general.Member', null=True, blank=True)
+    op_managers = models.ManyToManyField('general.Member', null=True, blank=True)
 
     def __str__(self):
         return self.title
