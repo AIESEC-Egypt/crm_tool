@@ -138,8 +138,7 @@ class TouchPoints(models.Model):
     audience = models.ForeignKey(Role, on_delete=models.CASCADE)
 
 
-
-class OperationalGoals:
+class OperationalGoal(models.Model):
     goal_type = (
         ("1", 'Sign UPs'),
         ("2", 'Applied'),
@@ -187,7 +186,7 @@ class Member(models.Model):
     languages = models.ManyToManyField(Language, null=True, blank=True)
     skills = models.ManyToManyField(Skill, null=True, blank=True)
     is_rxp = models.BooleanField(default=False)
-    operational_goals = models.ForeignKey(OperationalGoals, on_delete=models.CASCADE, null=True, blank=True)
+    operational_goals = models.ForeignKey(OperationalGoal, on_delete=models.CASCADE, null=True, blank=True)
     status_choices = (
         ("1", 'Active Member'),
         ("2", 'Member on IXP'),
