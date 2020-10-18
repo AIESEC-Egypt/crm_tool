@@ -111,7 +111,20 @@ class Member(models.Model):
     skills = models.ManyToManyField(Skill, null=True, blank=True)
     is_rxp = models.BooleanField(default=False)
     # operational_goals
-    # membership_status
+    status_choices = (
+        (1, 'Active Member'),
+        (2, 'Member on IXP'),
+        (3, 'Resigned'),
+        (4, 'Dismissed'),
+        (5, 'Under Probation'),
+        (6, 'Alumnus')
+    )
+    member_status = models.CharField(max_length = 1, choices = status_choices, default = 'Active Member')
+    reason_of_leaving = models.TextField(blank = True, null = True)
+
+    membership_cycles = models.IntegerField(null=True, blank=True, default=0)
+    completed_one_membership_cycle = models.BooleanField(default=False)
+
     # pipeline
     # touch_points
     managed_applcations_count = models.IntegerField(null=True, blank=True, default=0)

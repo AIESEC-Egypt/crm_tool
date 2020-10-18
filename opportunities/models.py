@@ -1,5 +1,5 @@
 from django.db import models
-from general import *
+from general.models import *
 
 
 class Slot(models.Model):

@@ -1,6 +1,8 @@
 from django.contrib import admin
 from general.models import *
 from opportunities.models import *
+from tm.models import *
+
 # Register your models here.
 
 admin.site.register(Entity)
