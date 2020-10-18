@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from opportunities.models import Opportunity
 # Create your models here.
 from django.db.models import Count
 
@@ -84,7 +84,6 @@ class Tag(models.Model):
         return self.tag
 
 
-
 class Member(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     expa_id = models.IntegerField(null=True, blank=True, default=0)
@@ -106,7 +105,7 @@ class Member(models.Model):
     department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True, blank=True)
     # applications
     role = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True)
-    # managed_eps
+    managed_eps = models.ManyToManyField(Opportunity, null=True, blank=True)
     # managed_ops
     # managed_enablers
     # managed_partners
@@ -118,11 +117,11 @@ class Member(models.Model):
     # membership_status
     # pipeline
     # touch_points
-    # managed_applcations_count
-    # managed_opportunities_count
-    # managed_eps_count
-    # managed_enablers_count
-    # managed_partners_count
+    managed_applcations_count = models.IntegerField(null=True, blank=True, default=0)
+    managed_opportunities_count = models.IntegerField(null=True, blank=True, default=0)
+    managed_eps_count = models.IntegerField(null=True, blank=True, default=0)
+    managed_enablers_count = models.IntegerField(null=True, blank=True, default=0)
+    managed_partners_count = models.IntegerField(null=True, blank=True, default=0)
     joined_atom_at = models.DateTimeField(null=True, blank=True)
     joined_expa_at = models.DateTimeField(null=True, blank=True)
     left_expa_at = models.DateTimeField(null=True, blank=True)
@@ -140,7 +139,6 @@ class Member(models.Model):
     def save(self, *args, **kwargs):
         self.full_name = "{} {}".format(self.first_name, self.last_name)
         super(Member, self).save(*args, **kwargs)
-
 
     def __str__(self):
         return "{} {}".format(self.first_name, self.last_name)

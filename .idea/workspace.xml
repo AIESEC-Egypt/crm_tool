@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/general/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/migrations/0002_auto_20201016_0249.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/migrations/0003_auto_20201016_0307.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/migrations/0004_member_full_name.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opportunities/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/opportunities/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="HTML File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,7 +27,6 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -51,7 +38,6 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="crm_tool.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -79,8 +65,6 @@
       <option name="presentableId" value="Default" />
       <updated>1601815486866</updated>
       <workItem from="1601815488117" duration="3831000" />
-      <workItem from="1601939663017" duration="15678000" />
-      <workItem from="1602791603634" duration="8833000" />
     </task>
     <servers />
   </component>
@@ -89,27 +73,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="275" y="27" key="#Intentions" timestamp="1602017050284">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state x="275" y="27" key="#Intentions/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1602017050284" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1601941049707">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1601941049707" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1601941049707">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1601941049707" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1601941049707">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1601941049707" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1601941049707">
-      <screen x="0" y="0" width="1366" height="738" />
-    </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1601941049707" />
   </component>
 </project>
