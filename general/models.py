@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from opportunities.models import *
-
+from tm.models import *
 # Create your models here.
 
 
@@ -159,7 +159,6 @@ class OperationalGoal(models.Model):
         return "{} {}".format(self.number, self.goal)
 
 
-
 class Member(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     expa_id = models.IntegerField(null=True, blank=True, default=0)
@@ -199,7 +198,17 @@ class Member(models.Model):
         ("6", 'Alumnus')
     )
     member_status = models.CharField(max_length = 1, choices = status_choices, default = 'Active Member')
-    reason_of_leaving = models.TextField(blank = True, null = True)
+    leaving_choices = (
+        ("1", 'Own Decision'),
+        ("2", 'Low Performance'),
+        ("3", 'Low engagement'),
+        ("4", 'Unethical Behavior'),
+        ("5", 'Rules Violation'),
+        ("6", 'Other')
+    )
+
+    reason_of_leaving = models.CharField(max_length = 1, choices = leaving_choices, blank = True, null = True,
+                                         default = 'Other')
 
     membership_cycles = models.IntegerField(null=True, blank=True, default=0)
     completed_atleast_one_membership_cycle = models.BooleanField(default=False)
@@ -218,16 +227,14 @@ class Member(models.Model):
     left_expa_at = models.DateTimeField(null=True, blank=True)
     left_expa = models.BooleanField(default=False)
     picture = models.ImageField(upload_to='user-images/', null=True, blank=True)
-    # team_standards =
-    # members_nps =
-    # retention
-    # productivity
+    team_standards = models.ManyToManyField('tm.TeamStandards', null=True, blank=True)
+    members_nps = models.ForeignKey('tm.Nps', null=True, on_delete = models.CASCADE)
+    retention = models.IntegerField(null=True, blank=True, default=0)
+    productivity = models.IntegerField(null=True, blank=True, default=0)
     notes = models.TextField(null=True, blank=True)
     cv = models.FileField(upload_to='user-cv/', null=True, blank=True)
     # operational_status
     tags = models.ManyToManyField(Tag, blank=True, null=True)
-
-
 
     def save(self, *args, **kwargs):
         self.full_name = "{} {}".format(self.first_name, self.last_name)
