@@ -18,14 +18,14 @@ class Opportunity(models.Model):
     title = models.CharField(max_length = 200, null = True, blank=True)
     applicants_count = models.IntegerField(null = True, blank=True)
     enabler = models.CharField(max_length = 200, null = True, blank=True)
-    lc = models.ForeignKey('general.Entity', related_name = 'opportunity.lc', on_delete = models.CASCADE,
+    lc = models.ForeignKey('general.Entity', related_name = 'opportunity_lc', on_delete = models.CASCADE,
                            null = True, blank = True)
-    mc = models.ForeignKey('general.Entity', related_name = 'opportunity.mc', on_delete = models.CASCADE,
+    mc = models.ForeignKey('general.Entity', related_name = 'opportunity_mc', on_delete = models.CASCADE,
                            null = True, blank = True)
     sdg = models.CharField(max_length = 200, null = True, blank=True)
     sub_product = models.CharField(max_length = 200, null = True, blank=True)
-    slot = models.ManyToManyField(Slot, null=True, blank=True, related_name = 'opportunity.slots')
-    op_managers = models.ManyToManyField('general.Member', null=True, blank=True, related_name = 'opportunity.managers')
+    slot = models.ManyToManyField(Slot, null=True, blank=True, related_name = 'opportunity_slots')
+    op_managers = models.ManyToManyField('general.Member', null=True, blank=True, related_name = 'opportunity_managers')
     op_choices = (
         ("1", 'Draft'),
         ("2", 'Under Review'),

@@ -63,11 +63,11 @@ class IndividualPlan(models.Model):
 
 class Building(models.Model):
     team_creation = models.ForeignKey(TeamCreation, null = True, blank = True,
-                                      on_delete = models.CASCADE, related_name = 'building.creation')
+                                      on_delete = models.CASCADE, related_name = 'building_creation')
     team_plan = models.ForeignKey(TeamPlan, null = True, blank = True,
-                                  on_delete = models.CASCADE, related_name = 'building.team_plan')
+                                  on_delete = models.CASCADE, related_name = 'building_team_plan')
     individual_plan = models.ForeignKey(IndividualPlan, null = True, blank = True,
-                                        on_delete = models.CASCADE, related_name = 'building.individual_plan')
+                                        on_delete = models.CASCADE, related_name = 'building_individual_plan')
 
 
 class ResultsEvaluation(models.Model):
@@ -92,11 +92,11 @@ class SupportSystem(models.Model):
 
 class Performing(models.Model):
     results_elevation = models.ForeignKey(ResultsEvaluation, null = True, blank = True,
-                                          on_delete = models.CASCADE, related_name = 'performing.result')
+                                          on_delete = models.CASCADE, related_name = 'performing_result')
     performance_tracking = models.ForeignKey(PerformanceTracking, null = True, blank = True,
-                                             on_delete = models.CASCADE, related_name = 'performing.tracking')
+                                             on_delete = models.CASCADE, related_name = 'performing_tracking')
     support_system = models.ForeignKey(SupportSystem, null = True, blank = True,
-                                       on_delete = models.CASCADE, related_name = 'performing.support_system')
+                                       on_delete = models.CASCADE, related_name = 'performing_support_system')
 
 
 class TeamDebrief(models.Model):
@@ -118,11 +118,11 @@ class IndividualTransition(models.Model):
 
 class Closing(models.Model):
     team_debrief = models.ForeignKey(TeamDebrief, null = True, blank = True,
-                                     on_delete = models.CASCADE, related_name = 'closing.debrief')
+                                     on_delete = models.CASCADE, related_name = 'closing_debrief')
     transition = models.ForeignKey(Transition, null = True, blank = True,
-                                   on_delete = models.CASCADE, related_name = 'closing.transition')
+                                   on_delete = models.CASCADE, related_name = 'closing_transition')
     individual_transition = models.ForeignKey(IndividualTransition, null = True, blank = True,
-                                              on_delete = models.CASCADE, related_name = 'closing.ind_transition')
+                                              on_delete = models.CASCADE, related_name = 'closing_ind_transition')
 
 
 class TeamStandards(models.Model):
@@ -152,22 +152,22 @@ class Nps(models.Model):
 
 class Nes(models.Model):
     member_name = models.ForeignKey('general.Member', null=True, blank=True,
-                                    on_delete = models.CASCADE, related_name = 'nes.member_name')
+                                    on_delete = models.CASCADE, related_name = 'nes_member_name')
     lc = models.ForeignKey('general.Entity', null=True, blank=True,
-                           on_delete = models.CASCADE, related_name = 'nes.lc')
+                           on_delete = models.CASCADE, related_name = 'nes_lc')
     role = models.ForeignKey('general.Role', null=True, blank=True,
-                             on_delete = models.CASCADE, related_name = 'nes.role')
+                             on_delete = models.CASCADE, related_name = 'nes_role')
     department = models.ForeignKey('general.Department', null=True,
-                                   blank=True, on_delete = models.CASCADE, related_name = 'nes.department')
+                                   blank=True, on_delete = models.CASCADE, related_name = 'nes_department')
     tl_satisfaction = models.IntegerField(null=True, blank=True, default=0)
     percentage_of_goal_achievement = models.ForeignKey(PlannedVsAchieved, null=True, blank=True,
-                                                       on_delete = models.CASCADE, related_name = 'nes.goal_ach')
+                                                       on_delete = models.CASCADE, related_name = 'nes_goal_ach')
     engagement = models.IntegerField(null=True, blank=True, default=0)
-    pipeline = models.ManyToManyField(Pipeline, null=True, blank=True, default=0, related_name = 'nes.pipeline')
+    pipeline = models.ManyToManyField(Pipeline, null=True, blank=True, default=0, related_name = 'nes_pipeline')
     team_standards = models.ForeignKey(TeamStandards, null = True,
-                                       blank = True, on_delete = models.CASCADE, related_name = 'nes.ts')
+                                       blank = True, on_delete = models.CASCADE, related_name = 'nes_ts')
     nps = models.ForeignKey(Nps, null = True, blank = True,
-                            on_delete = models.CASCADE, related_name = 'nes.nps')
+                            on_delete = models.CASCADE, related_name = 'nes_nps')
     class Meta:
         verbose_name = "NES"
         verbose_name_plural = "NES"

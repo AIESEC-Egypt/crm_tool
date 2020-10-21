@@ -7,20 +7,23 @@ from tm.models import *
 
 
 class EP(models.Model):
-    member = models.ForeignKey('general.Member', related_name='ep.member', on_delete=models.CASCADE
+    member = models.ForeignKey('general.Member', related_name='ep_member', on_delete=models.CASCADE
                                , null=True, blank=True)
-    managers = models.ManyToManyField('general.Member', related_name='ep.managers')
+    managers = models.ManyToManyField('general.Member', related_name='ep_managers')
     date_of_sign_up = models.DateTimeField(null = True, blank = True)
     applications_count = models.IntegerField(default=0, null=True, )
-    opportunities_applied_to = models.ManyToManyField('opportunities.Opportunity', related_name='ep.opportunities')
-    selected_program = models.ForeignKey('applications.Program', related_name='ep.program', on_delete=models.CASCADE
+    opportunities_applied_to = models.ManyToManyField('opportunities.Opportunity', related_name='ep_opportunities')
+    selected_program = models.ForeignKey('applications.Product', related_name='product', on_delete=models.CASCADE
                                          , null=True, blank=True)
     contacted_at = models.DateTimeField(null = True, blank = True)
-    contacted_by = models.ForeignKey('general.Member', related_name='ep.contacted_by', on_delete=models.CASCADE
+    contacted_by = models.ForeignKey('general.Member', related_name='ep_contacted_by', on_delete=models.CASCADE
                                      , null=True, blank=True)
-    status = models.ForeignKey('applications.Status', related_name='ep.status', on_delete=models.CASCADE, null=True,
+    status = models.ForeignKey('applications.Status', related_name='ep_status', on_delete=models.CASCADE, null=True,
                                blank=True)
-    applications = models.ForeignKey('applications.Application', related_name='ep.applications',
+    applications = models.ForeignKey('applications.Application', related_name='ep_applications',
                                      on_delete=models.CASCADE, null=True, blank=True)
+
+    class Meta:
+        verbose_name = "EP"
 
 

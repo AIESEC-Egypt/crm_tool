@@ -28,12 +28,12 @@ class Status(models.Model):
 
     )
 
-    app_status = models.CharField(max_length = 1, choices = app_choices, blank = True, null = True, default = 'Sign Up')
+    app_status = models.CharField(max_length = 2, choices = app_choices, blank = True, null = True, default = 'Sign Up')
 
 
-class Program(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=255,null=True, blank=True, default=0)
-    id = models.IntegerField(null=True, blank=True, default=0)
+    product_id = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return self.name
@@ -41,16 +41,19 @@ class Program(models.Model):
 
 class SDG(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True, default=0)
-    target = models.DecimalField()
-    id = models.IntegerField(null=True, blank=True, default=0)
+    target = models.FloatField(null=True, blank=True, default=0)
+    sdg_id = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "SDG"
+
 
 class SubProduct(models.Model):
     name = models.CharField(max_length=255)
-    id = models.IntegerField(null=True, blank=True, default=0)
+    sub_product_id = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return self.name
@@ -58,7 +61,7 @@ class SubProduct(models.Model):
 
 class Duration(models.Model):
     name = models.CharField(max_length=255)
-    id = models.IntegerField(null=True, blank=True, default=0)
+    duration_id = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return self.name
@@ -66,52 +69,52 @@ class Duration(models.Model):
 
 class Application(models.Model):
     application_id = models.IntegerField(null=True, blank=True, default=0)
-    host_lc = models.ForeignKey('general.Entity', related_name='application.host_lc', on_delete=models.CASCADE,
+    host_lc = models.ForeignKey('general.Entity', related_name='application_host_lc', on_delete=models.CASCADE,
                                 null=True, blank=True)
-    host_mc = models.ForeignKey('general.Entity', related_name='application.host_mc', on_delete=models.CASCADE
+    host_mc = models.ForeignKey('general.Entity', related_name='application_host_mc', on_delete=models.CASCADE
                                 , null=True, blank=True)
-    home_lc = models.ForeignKey('general.Entity', related_name='application.home_lc', on_delete=models.CASCADE
+    home_lc = models.ForeignKey('general.Entity', related_name='application_home_lc', on_delete=models.CASCADE
                                 , null=True, blank=True)
-    home_mc = models.ForeignKey('general.Entity', related_name='application.home_mc', on_delete=models.CASCADE
+    home_mc = models.ForeignKey('general.Entity', related_name='application_home_mc', on_delete=models.CASCADE
                                 , null=True, blank=True)
-    ep = models.ForeignKey('sign_ups.EP', related_name='application.ep', on_delete=models.CASCADE
+    ep = models.ForeignKey('sign_ups.EP', related_name='application_ep', on_delete=models.CASCADE
                            , null=True, blank=True)
-    application_manager = models.ForeignKey('general.Member', related_name='applications',
+    application_manager = models.ForeignKey('general.Member', related_name='application_manager',
                                             on_delete=models.CASCADE, null=True, blank=True)
     is_ir = models.BooleanField(null=True, default = False)
-    status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='application.status',
+    status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='application_status',
                                null=True, blank=True)
     process_time_SU_APL = models.IntegerField(null=True, blank=True, default=0)
     process_time_APL_ACC = models.IntegerField(null=True, blank=True, default=0)
     process_time_APL_APD = models.IntegerField(null=True, blank=True, default=0)
     process_time_SU_contacted = models.IntegerField(null=True, blank=True, default=0)
     process_time_APL_contacted = models.IntegerField(null=True, blank=True, default=0)
-    tags = models.ForeignKey('general.Tag', related_name='application.tags', on_delete=models.CASCADE
+    tags = models.ForeignKey('general.Tag', related_name='application_tags', on_delete=models.CASCADE
                              , null=True, blank=True)
     notes = models.TextField(null=True, blank=True)
     applied_at = models.DateTimeField(null=True, blank=True)
     accepted_at = models.DateTimeField(null=True, blank=True)
     approved_at = models.DateTimeField(null=True, blank=True)
     realized_at = models.DateTimeField(null=True, blank=True)
-    accepted_by = models.ForeignKey('general.Member', related_name='application.accepted_by', on_delete=models.CASCADE
+    accepted_by = models.ForeignKey('general.Member', related_name='application_accepted_by', on_delete=models.CASCADE
                                     , null=True, blank=True)
-    approved_by = models.ForeignKey('general.Member', related_name='application.approved_by', on_delete=models.CASCADE
+    approved_by = models.ForeignKey('general.Member', related_name='application_approved_by', on_delete=models.CASCADE
                                     , null=True, blank=True)
-    realized_by = models.ForeignKey('general.Member', related_name='application.realized_by', on_delete=models.CASCADE
+    realized_by = models.ForeignKey('general.Member', related_name='application_realized_by', on_delete=models.CASCADE
                                     , null=True, blank=True)
-    contacted_by = models.ForeignKey('general.Member', related_name='application.contacted_by', on_delete=models.CASCADE
+    contacted_by = models.ForeignKey('general.Member', related_name='application_contacted_by', on_delete=models.CASCADE
                                      , null=True, blank=True)
-    re_approved_by = models.ForeignKey('general.Member', related_name='application.re_approved_by',
+    re_approved_by = models.ForeignKey('general.Member', related_name='application_re_approved_by',
                                        on_delete=models.CASCADE, null=True, blank=True)
-    cv_filtered_by = models.ForeignKey('general.Member', related_name='application.cv_filtered_by',
+    cv_filtered_by = models.ForeignKey('general.Member', related_name='application_cv_filtered_by',
                                        on_delete=models.CASCADE, null=True, blank=True)
-    program = models.ForeignKey(Program, related_name='application.program',
+    product = models.ForeignKey(Product, related_name='application_product',
                                 on_delete=models.CASCADE, null=True, blank=True)
-    sdg = models.ForeignKey(SDG, related_name='application.sdg', on_delete=models.CASCADE, null=True, blank=True)
-    sub_product = models.ForeignKey(SubProduct, related_name='application.sub_product', on_delete=models.CASCADE,
+    sdg = models.ForeignKey(SDG, related_name='application_sdg', on_delete=models.CASCADE, null=True, blank=True)
+    sub_product = models.ForeignKey(SubProduct, related_name='application_sub_product', on_delete=models.CASCADE,
                                     null=True, blank=True)
-    duration = models.ForeignKey(Duration, related_name='application', on_delete=models.CASCADE
+    duration = models.ForeignKey(Duration, related_name='application_duration', on_delete=models.CASCADE
                                  , null=True, blank=True)
-    tn_fees = models.ForeignKey('opportunities.Opportunity', related_name='application.tn_fees',
+    tn_fees = models.ForeignKey('opportunities.Opportunity', related_name='application_tn_fees',
                                 on_delete=models.CASCADE, null=True, blank=True)
     contract_price = models.IntegerField(null=True, blank=True, default = 2400)

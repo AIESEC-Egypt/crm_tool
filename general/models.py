@@ -9,7 +9,7 @@ from sign_ups.models import *
 class Entity(models.Model):
     name = models.CharField(max_length=250)
     expa_id = models.IntegerField(null=True, blank=True, default=0)
-    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name = 'entity.parent')
+    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name = 'entity_parent')
 
     def __str__(self):
         return self.name
@@ -36,7 +36,7 @@ class Department(models.Model):
 
 
 class Role(models.Model):
-    department = models.ForeignKey(Department, on_delete=models.CASCADE)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name = 'role_department')
     level = (
         ("1", 'Member'),
         ("2", 'Coordinator'),
@@ -59,7 +59,7 @@ class Role(models.Model):
 
     )
     hierarchy = models.CharField(max_length = 2, choices = level, default = 'Other')
-    lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True, related_name = 'role.lc')
+    lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True, related_name = 'role_lc')
     is_leading_a_team = models.BooleanField(default=False)
     start_date = models.DateTimeField(null=True, blank=True)
     end_date = models.DateTimeField(null=True, blank=True)
@@ -110,7 +110,7 @@ class Tag(models.Model):
 
 class TouchPoints(models.Model):
     meeting_host_entity = models.ForeignKey(Entity, null=True, blank=True, on_delete=models.CASCADE,
-                                            related_name = 'meeting.entity')
+                                            related_name = 'meeting_entity')
     meeting_id = models.IntegerField(null=True, blank=True, default=0)
     start_date_time = models.DateTimeField(null=True, blank=True)
     end_date_time = models.DateTimeField(null=True, blank=True)
@@ -142,7 +142,7 @@ class TouchPoints(models.Model):
 
     meeting_type = models.CharField(max_length = 2, choices = meeting_types, default = 'Other')
     audience = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True,
-                                 related_name = 'meeting.audience')
+                                 related_name = 'meeting_audience')
 
 
 class OperationalGoal(models.Model):
@@ -171,7 +171,7 @@ class Member(models.Model):
     last_name = models.CharField(max_length=100, null=True, blank=True)
     full_name = models.CharField(max_length=250, null=True, blank=True)
     dob = models.DateField(null=True, blank=True)
-    lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True, related_name = 'member.lc')
+    lc = models.ForeignKey(Entity, on_delete=models.CASCADE, null=True, blank=True, related_name = 'member_lc')
     gender = models.CharField(max_length=100, null=True, blank=True)
     phone_number = models.CharField(max_length=250, null=True, blank=True)
     whatsapp = models.CharField(max_length=250, null=True, blank=True)
@@ -180,22 +180,22 @@ class Member(models.Model):
     facebook = models.CharField(max_length=250, null=True, blank=True)
     instagram = models.CharField(max_length=250, null=True, blank=True)
     address = models.ForeignKey(Address, on_delete=models.CASCADE, null=True, blank=True,
-                                related_name = 'member.address')
+                                related_name = 'member_address')
     is_ixp = models.BooleanField(default=False)
     department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True,
-                                   blank=True, related_name = 'member.department')
-    role = models.ManyToManyField(Role, null=True, blank=True, related_name = 'member.roles')
+                                   blank=True, related_name = 'member_department')
+    role = models.ManyToManyField(Role, null=True, blank=True, related_name = 'member_roles')
     managed_ops = models.ManyToManyField('opportunities.Opportunity', null=True,
-                                         blank=True, related_name = 'member.managed_ops')
-    managed_eps = models.ManyToManyField('sign_ups.EP', null=True, blank=True, related_name = 'member.managed_eps')
+                                         blank=True, related_name = 'member_managed_ops')
+    managed_eps = models.ManyToManyField('sign_ups.EP', null=True, blank=True, related_name = 'member_managed_eps')
     # managed_enablers
     # managed_partners
-    backgrounds = models.ManyToManyField(Background, null=True, blank=True, related_name = 'member.backgrounds')
-    languages = models.ManyToManyField(Language, null=True, blank=True, related_name = 'member.languages')
-    skills = models.ManyToManyField(Skill, null=True, blank=True, related_name = 'member.skills')
+    backgrounds = models.ManyToManyField(Background, null=True, blank=True, related_name = 'member_backgrounds')
+    languages = models.ManyToManyField(Language, null=True, blank=True, related_name = 'member_languages')
+    skills = models.ManyToManyField(Skill, null=True, blank=True, related_name = 'member_skills')
     is_rxp = models.BooleanField(default=False)
     operational_goals = models.ForeignKey(OperationalGoal, on_delete=models.CASCADE, null=True,
-                                          blank=True, related_name = 'member.operational_goals')
+                                          blank=True, related_name = 'member_operational_goals')
     status_choices = (
         ("1", 'Active Member'),
         ("2", 'Member on IXP'),
@@ -216,13 +216,13 @@ class Member(models.Model):
     reason_of_leaving = models.CharField(max_length = 1, choices = leaving_choices, blank = True, null = True,
                                          default = 'Other')
     membership_cycles = models.IntegerField(null=True, blank=True, default=0)
-    completed_atleast_one_membership_cycle = models.BooleanField(default=False)
-    touchpoints = models.ForeignKey(TouchPoints, on_delete=models.CASCADE,
-                                    null=True, related_name = 'member.touchpoints')
-    number_of_touchpoints_hosted = models.IntegerField(null=True, blank=True, default=0)
-    number_of_touchpoints_attended = models.IntegerField(null=True, blank=True, default=0)
-    number_of_touchpoints_required_to_attend = models.IntegerField(null=True, blank=True, default=0)
-    managed_applcations_count = models.IntegerField(null=True, blank=True, default=0)
+    completed_at_least_one_membership_cycle = models.BooleanField(default=False)
+    touch_points = models.ForeignKey(TouchPoints, on_delete=models.CASCADE,
+                                     null=True, related_name = 'member_touch_points')
+    number_of_touch_points_hosted = models.IntegerField(null=True, blank=True, default=0)
+    number_of_touch_points_attended = models.IntegerField(null=True, blank=True, default=0)
+    number_of_touch_points_required_to_attend = models.IntegerField(null=True, blank=True, default=0)
+    managed_applications_count = models.IntegerField(null=True, blank=True, default=0)
     managed_opportunities_count = models.IntegerField(null=True, blank=True, default=0)
     managed_eps_count = models.IntegerField(null=True, blank=True, default=0)
     managed_enablers_count = models.IntegerField(null=True, blank=True, default=0)
@@ -233,15 +233,15 @@ class Member(models.Model):
     left_expa = models.BooleanField(default=False)
     picture = models.ImageField(upload_to='user-images/', null=True, blank=True)
     team_standards = models.ManyToManyField('tm.TeamStandards', null=True, blank=True,
-                                            related_name = 'member.ts')
-    members_nps = models.ForeignKey('tm.Nps', null=True, on_delete = models.CASCADE, related_name = 'member.nps')
+                                            related_name = 'member_ts')
+    members_nps = models.ForeignKey('tm.Nps', null=True, on_delete = models.CASCADE, related_name = 'member_nps')
     retention = models.IntegerField(null=True, blank=True, default=0)
     productivity = models.IntegerField(null=True, blank=True, default=0)
     notes = models.TextField(null=True, blank=True)
     cv = models.FileField(upload_to='user-cv/', null=True, blank=True)
     tags = models.ManyToManyField(Tag, blank=True, null=True)
     operational_status = models.ManyToManyField('sign_ups.EP', null=True, blank=True,
-                                                related_name = 'member.operational_status')
+                                                related_name = 'member_operational_status')
 
     def save(self, *args, **kwargs):
         self.full_name = "{} {}".format(self.first_name, self.last_name)

@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/applications/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/migrations/0002_auto_20201021_2230.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/migrations/0014_auto_20201021_2230.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/migrations/0015_auto_20201021_2230.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opportunities/migrations/0006_auto_20201021_2230.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sign_ups/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm/migrations/0007_auto_20201021_2230.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opportunities/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/opportunities/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sign_ups/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sign_ups/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tm/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tm/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tm/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +81,8 @@
       <workItem from="1603023231448" duration="11691000" />
       <workItem from="1603052212661" duration="3000" />
       <workItem from="1603054294869" duration="13387000" />
-      <workItem from="1603281203261" duration="11644000" />
+      <workItem from="1603281203261" duration="11919000" />
+      <workItem from="1603311183434" duration="2073000" />
     </task>
     <servers />
   </component>
@@ -79,5 +91,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1366" y="0" width="1040" height="535" maximized="true" key="dock-window-1" timestamp="1603313258347">
+      <screen x="1366" y="0" width="1024" height="738" />
+    </state>
+    <state x="1366" y="0" width="1040" height="535" maximized="true" key="dock-window-1/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1603313258347" />
+    <state x="1366" y="0" width="1040" height="535" maximized="true" key="dock-window-2" timestamp="1603313258347">
+      <screen x="1366" y="0" width="1024" height="738" />
+    </state>
+    <state x="1366" y="0" width="1040" height="535" maximized="true" key="dock-window-2/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1603313258347" />
+    <state x="1366" y="0" width="1040" height="535" maximized="true" key="dock-window-3" timestamp="1603313258347">
+      <screen x="1366" y="0" width="1024" height="738" />
+    </state>
+    <state x="1366" y="0" width="1040" height="535" maximized="true" key="dock-window-3/0.0.1366.738/1366.0.1024.738@0.0.1366.738" timestamp="1603313258347" />
   </component>
 </project>
