@@ -1,7 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 from opportunities.models import *
-
+from sign_ups.models import *
+from tm.models import *
+from applications.models import *
+from ams.models import *
 # Create your models here.
 
 

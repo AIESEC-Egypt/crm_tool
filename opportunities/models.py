@@ -1,6 +1,9 @@
 from django.db import models
 from general import *
-
+from opportunities.models import *
+from sign_ups.models import *
+from applications.models import *
+from ams.models import *
 
 class Slot(models.Model):
     slot_id = models.IntegerField(null = True, blank = True, default = 0)
