@@ -9,3 +9,6 @@ def home(request):
 
 # def calender(request):
 #     return render(request, 'calendar.html')
+
+def profile(request):
+    return render(request, 'profile.html')
