@@ -2,23 +2,113 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/applications/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/applications/migrations/0002_auto_20201021_2230.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/migrations/0014_auto_20201021_2230.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/general/migrations/0015_auto_20201021_2230.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opportunities/migrations/0006_auto_20201021_2230.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sign_ups/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tm/migrations/0007_auto_20201021_2230.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/applications/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opportunities/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/opportunities/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign_ups/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/sign_ups/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tm/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tm/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tm/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm_tool/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm_tool/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basic-animations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basic-inputs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/basic-tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blank-template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blue-system.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bootstrap-file-input.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bootstrap-markdown.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carousels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chart-js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chartist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat-dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ckeditor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clock-picker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/code-prettify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/color-picker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/containers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customer-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/data-tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/date-range-picker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/datetime-picker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dialogs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/documentation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dropzone-js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ecommerce-dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit-customer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit-order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit-product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-400-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-400-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-401-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-401-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-401.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-403-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-403-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-404-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-404-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-500-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-500-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-503-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-503-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/error-503.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flag-icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/flot-charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/font-awesome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forgot-password-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forgot-password-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forgot-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forms-layouts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forms-validation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forms-wizard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/gallery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/glyphicons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/google-maps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/green-dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/green-system.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/image-cropper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/invoice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/loading-animations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lock-screen-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lock-screen-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lock-screen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mailbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/material-design.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/morris-charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/multi-select.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navigations.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/order-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/other-charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/other-plugins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pricing-tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/progress-bars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/purple-dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/purple-system.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/red-dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/red-system.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register-v2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register-v3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scripts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search-results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/summernote.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sweet-alert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/themify.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/timeline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/toastr.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/typography.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/vector-maps.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/weather-icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/widgets.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yellow-dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/yellow-system.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
