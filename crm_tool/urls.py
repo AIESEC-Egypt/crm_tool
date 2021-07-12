@@ -21,6 +21,6 @@ from general.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
-    path('profile.html', profile, name='profile1'),
+    path('profile.html', profile, name='profile'),
     # path('calendar', calender, name='calendar')
 ]

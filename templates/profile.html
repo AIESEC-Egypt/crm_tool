@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        {% include 'head.html' %}
+      {% include head.html %}
 {#    <meta charset="utf-8">#}
 {#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
 {#    <meta name="viewport" content="width=device-width, initial-scale=1">#}
-{#    <title>Umega App - Profile</title>#}
+{#    <title>CRM Tool - Profile</title>#}
 {#    <!-- PACE-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/plugins/PACE/themes/blue/pace-theme-flash.css">#}
-{#    <script type="text/javascript" src="static/plugins/PACE/pace.min.js"></script>#}
+{#      #}
+{#      #}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/PACE/themes/blue/pace-theme-flash.css">#}
+{#    <script type="text/javascript" src="../plugins/PACE/pace.min.js"></script>#}
+{#      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>#}
 {#    <!-- Bootstrap CSS-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/dist/css/bootstrap.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/bootstrap/dist/css/bootstrap.min.css">#}
 {#    <!-- Fonts-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/plugins/themify-icons/themify-icons.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/themify-icons/themify-icons.css">#}
 {#    <!-- Malihu Scrollbar-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">#}
 {#    <!-- Animo.js-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/plugins/animo.js/animate-animo.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/animo.js/animate-animo.min.css">#}
 {#    <!-- Flag Icons-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/plugins/flag-icon-css/css/flag-icon.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/flag-icon-css/css/flag-icon.min.css">#}
 {#    <!-- Bootstrap Progressbar-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">#}
 {#    <!-- Primary Style-->#}
-{#    <link rel="stylesheet" type="text/css" href="static/build/css/fourth-layout.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../build/css/fourth-layout.css">#}
+{#          <!-- DataTables-->#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/datatables.net-bs/css/dataTables.bootstrap.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/datatables.net-colreorder-bs/css/colReorder.bootstrap.min.css">#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css">#}
+{#    <!-- Bootstrap Date Range Picker-->#}
+{#    <link rel="stylesheet" type="text/css" href="../plugins/bootstrap-daterangepicker/daterangepicker.css">#}
+{##}
 {#    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->#}
 {#    <!-- WARNING: Respond.js doesn't work if you view the page via file://--> #}
 {#    <!--[if lt IE 9]>#}
 {#    <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>#}
 {#    <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>#}
-{#    <![endif]-->#}
+{#    <![endif]-->script#}
   </head>
   <body>
     <!-- Header start-->
@@ -36,14 +47,14 @@
       <div class="search-bar closed">
         <form>
           <div class="input-group input-group-lg">
-            <input type="text" placeholder="Search forstatic." class="form-control"><span class="input-group-btn">
+            <input type="text" placeholder="Search for..." class="form-control"><span class="input-group-btn">
               <button type="button" class="btn btn-default search-bar-toggle"><i class="ti-close"></i></button></span>
           </div>
         </form>
-      </div><a href="index.html" class="brand pull-left"><img src="static/build/images/logo/logo-light.png" alt="" width="100" class="logo"><img src="static/build/images/logo/logo-sm-light.png" alt="" width="28" class="logo-sm"></a><a href="javascript:;" role="button" class="hamburger-menu pull-left"><span></span></a>
+      </div><a href="index.html" class="brand pull-left"><img src="" alt="" width="100" class=""><img src="../build/images/logo/logo-sm-light.png" alt="" width="28" class="logo-sm"></a><a href="javascript:;" role="button" class="hamburger-menu pull-left"><span></span></a>
       <form class="mt-15 mb-15 pull-left hidden-xs">
         <div class="form-group has-feedback mb-0">
-          <input type="text" aria-describedby="inputSearchFor" placeholder="Search forstatic." style="width: 200px" class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
+          <input type="text" aria-describedby="inputSearchFor" placeholder="Search for..." style="width: 200px" class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
         </div>
       </form>
       <ul class="notification-bar list-inline pull-right">
@@ -53,7 +64,7 @@
             <h5 class="dropdown-header">You have 6 notifications</h5>
             <ul data-mcs-theme="minimal-dark" class="media-list mCustomScrollbar">
               <li class="media"><a href="javascript:;">
-                  <div class="media-left avatar"><img src="static/build/images/users/17.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/17.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">William Carlson</h6>
                     <p class="text-muted mb-0">Commented on your post</p>
@@ -62,7 +73,7 @@
                     <time datetime="2015-12-10T20:27:48+07:00" class="fs-11">5 mins</time>
                   </div></a></li>
               <li class="media"><a href="javascript:;">
-                  <div class="media-left avatar"><img src="static/build/images/users/19.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/19.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Barbara Ortega</h6>
                     <p class="text-muted mb-0">Sent you a new email</p>
@@ -71,7 +82,7 @@
                     <time datetime="2015-12-10T20:42:40+07:00" class="fs-11">8 mins</time>
                   </div></a></li>
               <li class="media"><a href="javascript:;">
-                  <div class="media-left avatar"><img src="static/build/images/users/02.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/02.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Mark Barnett</h6>
                     <p class="text-muted mb-0">Sent you a new message</p>
@@ -80,7 +91,7 @@
                     <time datetime="2015-12-10T20:50:48+07:00" class="fs-11">9 mins</time>
                   </div></a></li>
               <li class="media"><a href="javascript:;">
-                  <div class="media-left avatar"><img src="static/build/images/users/11.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/11.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Alexander Gilbert</h6>
                     <p class="text-muted mb-0">Sent you a new email</p>
@@ -89,7 +100,7 @@
                     <time datetime="2015-12-10T20:42:40+07:00" class="fs-11">15 mins</time>
                   </div></a></li>
               <li class="media"><a href="javascript:;">
-                  <div class="media-left avatar"><img src="static/build/images/users/12.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/12.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Amanda Collins</h6>
                     <p class="text-muted mb-0">You have 8 unread messages</p>
@@ -98,7 +109,7 @@
                     <time datetime="2015-12-10T20:35:35+07:00" class="fs-11">22 mins</time>
                   </div></a></li>
               <li class="media"><a href="javascript:;">
-                  <div class="media-left avatar"><img src="static/build/images/users/13.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/13.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Christian Lane</h6>
                     <p class="text-muted mb-0">Commented on your post</p>
@@ -112,9 +123,9 @@
         </li>
         <li class="dropdown hidden-xs"><a id="dropdownMenu2" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle header-icon lh-1 pt-15 pb-15">
             <div class="media mt-0">
-              <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+              <div class="media-left avatar"><img src="../build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
               <div class="media-right media-middle pl-0">
-                <p class="fs-12 text-base mb-0">Hi, Matthew</p>
+                <p class="fs-12 text-base mb-0">Hi, Saif</p>
               </div>
             </div></a>
           <ul aria-labelledby="dropdownMenu2" class="dropdown-menu fs-12 animated fadeInDown">
@@ -131,31 +142,31 @@
       <!-- Main Sidebar start-->
       <aside class="main-sidebar">
         <div class="user">
-          <div id="esp-user-profile" data-percent="65" style="height: 130px; width: 130px; line-height: 100px; padding: 15px;" class="easy-pie-chart"><img src="static/build/images/users/04.jpg" alt="" class="avatar img-circle"><span class="status bg-success"></span></div>
-          <h4 class="fs-16 text-white mt-15 mb-5 fw-300">Matthew Gonzalez</h4>
-          <p class="mb-0 text-muted">Designer</p>
+<!--          <div id="esp-user-profile" data-percent="65" style="height: 130px; width: 130px; line-height: 100px; padding: 15px;" class="easy-pie-chart"><img src="../build/images/users/04.jpg" alt="" class="avatar img-circle"><span class="status bg-success"></span></div>-->
+          <h4 class="fs-16 text-white mt-15 mb-5 fw-300">Saif Elnewehy</h4>
+          <p class="mb-0 text-muted">Web Developer</p>
         </div>
         <ul class="list-unstyled navigation mb-0">
           <li class="sidebar-category">Main</li>
-          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="bubble collapsed"><i class="ti-home"></i><span class="sidebar-title">Dashboard</span><span class="badge bg-danger">2</span></a>
+          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="bubble collapsed"><i class="ti-panel"></i><span class="sidebar-title">Dashboard</span><span class="bdge bg-danger"></span></a>
             <ul id="collapse1" class="list-unstyled collapse">
               <li><a href="index.html">Dashboard v1</a></li>
               <li><a href="index-v2.html">Dashboard v2</a></li>
             </ul>
           </li>
-          <li class="panel"><a href="widgets.html"><i class="ti-panel"></i><span class="sidebar-title">Widgets </span><span class="label label-outline label-danger">Updated</span></a></li>
-          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed"><i class="ti-shopping-cart"></i><span class="sidebar-title">E-commerce</span></a>
+<!--          <li class="panel"><a href="widgets.html"><i class="ti-panel"></i><span class="sidebar-title"> </span><span class="label label-outline label-danger"></span></a></li>-->
+          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse3" aria-expanded="false" aria-controls="collapse3" class="collapsed"><i class="ti-shopping-cart"></i><span class="sidebar-title">Applications</span></a>
             <ul id="collapse3" class="list-unstyled collapse">
               <li><a href="ecommerce-dashboard.html">Dashboard</a></li>
-              <li><a href="product-list.html">Product list</a></li>
-              <li><a href="edit-product.html">Edit product</a></li>
-              <li><a href="order-list.html">Order list</a></li>
-              <li><a href="edit-order.html">Edit order</a></li>
-              <li><a href="customer-list.html">Customer list</a></li>
-              <li><a href="edit-customer.html">Edit customer</a></li>
+<!--              <li><a href="product-list.html">Product list</a></li>-->
+<!--              <li><a href="edit-product.html">Edit product</a></li>-->
+              <li><a href="order-list.html">ICX</a></li>
+<!--              <li><a href="edit-order.html">Edit order</a></li>-->
+              <li><a href="customer-list.html">OGX</a></li>
+<!--              <li><a href="edit-customer.html">OGX</a></li>-->
             </ul>
           </li>
-          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse4" aria-expanded="false" aria-controls="collapse4" class="collapsed"><i class="ti-paint-bucket"></i><span class="sidebar-title">Color system</span></a>
+          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse4" aria-expanded="false" aria-controls="collapse4" class="collapsed"><i class="ti-face-smile"></i><span class="sidebar-title">Membership</span></a>
             <ul id="collapse4" class="list-unstyled collapse">
               <li><a href="green-system.html">Green</a></li>
               <li><a href="blue-system.html">Blue</a></li>
@@ -164,7 +175,7 @@
               <li><a href="yellow-system.html">Yellow</a></li>
             </ul>
           </li>
-          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse5" aria-expanded="false" aria-controls="collapse5" class="collapsed"><i class="ti-brush-alt"></i><span class="sidebar-title">Skins</span></a>
+          <!-- <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse5" aria-expanded="false" aria-controls="collapse5" class="collapsed"><i class="ti-layers-alt"></i><span class="sidebar-title">AMS</span></a>
             <ul id="collapse5" class="list-unstyled collapse">
               <li><a href="green-dashboard.html">Green</a></li>
               <li><a href="blue-dashboard.html">Blue</a></li>
@@ -172,7 +183,7 @@
               <li><a href="red-dashboard.html">Red</a></li>
               <li><a href="yellow-dashboard.html">Yellow</a></li>
             </ul>
-          </li>
+          </li> -->
           <li class="sidebar-category">Menu Levels</li>
           <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse20" aria-expanded="false" aria-controls="collapse20" class="collapsed"><i class="ti-folder"></i><span class="sidebar-title">Menu levels</span></a>
             <ul id="collapse20" class="list-unstyled collapse">
@@ -405,11 +416,13 @@
             <div class="col-sm-6">
               <h4 class="mt-0 mb-5">Profile</h4>
               <ol class="breadcrumb mb-0">
-                <li><a href="#">Umega</a></li>
+                <li><a href="#">CRM TOOL</a></li>
                 <li><a href="#">User Pages</a></li>
                 <li class="active">Profile</li>
               </ol>
             </div>
+              
+<!--
             <div class="col-sm-6">
               <div class="btn-group mt-5">
                 <button type="button" class="btn btn-default btn-outline"><i class="flag-icon flag-icon-us mr-5"></i> English</button>
@@ -423,20 +436,22 @@
                 </ul>
               </div>
             </div>
+-->
           </div>
         </div>
         <div class="page-content container-fluid p-0">
+            
           <div class="row row-0">
             <div class="col-lg-12">
-              <div class="overlay-container text-white"><img src="static/build/images/backgrounds/profile.png" alt="" class="overlay-bg img-responsive">
-                <div style="padding: 120px 30px 30px 30px" class="overlay-content clearfix">
+              <div class="overlay-container text-black">
                   <div class="pull-left media">
-                    <div class="media-left"><a href="javascript:void(0)" style="display: block; border-radius: 50%; padding: 3px; background-color: #fff;"><img src="static/build/images/users/06.jpg" width="100" alt="" class="media-object img-circle"></a></div>
+                    <div class="media-left"><a href="javascript:void(0)" style="display: block; border-radius: 50%; padding: 3px; background-color: #fff;"><img src="../build/images/users/06.jpg" width="100" alt="" class="media-object img-circle"></a></div>
                     <div style="width: auto" class="media-body media-middle">
-                      <h2 class="media-heading">Steven Cook</h2>
-                      <div class="fs-20">Software Developer</div>
+                      <h2 class="media-heading">Saif Elnewehy</h2>
+                      <div class="fs-20">Web Developer</div>
                     </div>
                   </div>
+<!--
                   <div class="pull-right text-center">
                     <ul class="list-inline">
                       <li>
@@ -454,303 +469,1268 @@
                     </ul>
                     <button type="button" class="btn btn-raised btn-block btn-primary">Follow</button>
                   </div>
+-->
                 </div>
               </div>
             </div>
           </div>
-          <div class="row ml-10 mr-10 pt-10">
-            <div class="col-md-3">
-              <div class="widget clear">
+           <div class="widget clear col-md-2">
+                
+                <div class="widget-body">
+            <ul role="tablist" class="nav nav-pills nav-stacked mb-15">
+                      <li role="presentation" class="active"><a id="home-tab8" href="#home8" role="tab" data-toggle="tab" aria-controls="home8" aria-expanded="true">DASHBOARD</a></li>
+                      <li role="presentation"><a id="profile-tab8" href="#profile8" role="tab" data-toggle="tab" aria-controls="profile8" aria-expanded="false">Back Office Dashboard</a></li>
+                  <li role="presentation"><a id="profile-tab9" href="#profile9" role="tab" data-toggle="tab" aria-controls="profile9" aria-expanded="false">Details</a></li>
+                <li role="presentation"><a id="profile-tab10" href="#profile10" role="tab" data-toggle="tab" aria-controls="profile10" aria-expanded="false">Applications</a></li>
+                    </ul>
+                </div>
+              </div>
+          <div class="row ml-10 mr-10 pt-10 widget">
+           <div id="myTabContent" class="tab-content">
+            <div id="home8" role="tabpanel" aria-labelledby="home-tab8" class="tab-pane fade active in">
+                <div class="col-md-3 offset-md-1 pull-right">
+              <div class="widget offset-md-3">
                 <div class="widget-heading">
-                  <h3 class="widget-title">About me</h3>
+                  <h3 class="widget-title ">Team members</h3>
                 </div>
                 <div class="widget-body">
                   <ul class="media-list mb-0">
-                    <li class="media">
-                      <div class="media-left"><i class="ti-briefcase text-info"></i></div>
-                      <div class="media-body">
-                        <p>Software Developer</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-gift text-info"></i></div>
-                      <div class="media-body">
-                        <p>20 October 1990</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-email text-info"></i></div>
-                      <div class="media-body">
-                        <p>lethemes@gmail.com</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-home text-info"></i></div>
-                      <div class="media-body">
-                        <p>4270 Cottage Hill Road</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-mobile text-info"></i></div>
-                      <div class="media-body">
-                        <p>(251) 300-2770</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-world text-info"></i></div>
-                      <div class="media-body">
-                        <p>www.lethemes.net</p>
-                      </div>
-                    </li>
+                    <li class="media"><a href="javascript:;" class="conversation-toggle">
+                        <div class="media-left avatar"><img src="../build/images/users/10.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                        <div class="media-body">
+                          <h5 class="media-heading">Aditya Kumar</h5>
+                          <p class="text-muted mb-0">Platforms Manager TL</p>
+                        </div></a></li>
+                    <li class="media"><a href="javascript:;" class="conversation-toggle">
+                        <div class="media-left avatar"><img src="../build/images/users/20.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                        <div class="media-body">
+                          <h5 class="media-heading">Ali Amr</h5>
+                          <p class="text-muted mb-0">Platforms Manager TL</p>
+                        </div></a></li>
+                    <li class="media"><a href="javascript:;" class="conversation-toggle">
+                        <div class="media-left avatar"><img src="../build/images/users/11.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
+                        <div class="media-body">
+                          <h5 class="media-heading">Vashika</h5>
+                          <p class="text-muted mb-0">UI/UX Designer</p>
+                        </div></a></li>
+                
                   </ul>
                 </div>
               </div>
-              <div class="widget clear">
+                
+             <div class="widget">
                 <div class="widget-heading">
-                  <h3 class="widget-title">Biography</h3>
+                  <h3 class="widget-title">Upcoming Touchpoints</h3>
                 </div>
                 <div class="widget-body">
-                  <p>I am an Java, Android and Python software developer and teacher with 5 years of development experience! Whats more I reveal all my knowledge and secrets in my courses!</p>
-                  <p>I've been using Java since all the way back in 2006 !</p>
-                </div>
-              </div>
-              <div class="widget clear">
-                <div class="widget-heading">
-                  <h3 class="widget-title">Skills</h3>
-                </div>
-                <div class="widget-body">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <div class="block clearfix mb-5"><span class="pull-left fs-12">HTML5</span><span class="pull-right label label-outline label-primary">95%</span></div>
-                      <div class="progress progress-xs">
-                        <div role="progressbar" data-transitiongoal="85" class="progress-bar"></div>
-                      </div>
+                  <ul class="activity-list activity-sm list-unstyled mb-0">
+                    <li class="activity-purple">
+                      <time datetime="2015-12-10T20:50:48+07:00" class="fs-12 text-muted">1st of December 2:00 PM</time>
+                      <p class="mt-10 mb-0"><span class="label label-success"></span>MC Monthly Review</p>
                     </li>
-                    <li>
-                      <div class="block clearfix mb-5"><span class="pull-left fs-12">CSS</span><span class="pull-right label label-outline label-success">98%</span></div>
-                      <div class="progress progress-xs">
-                        <div role="progressbar" data-transitiongoal="98" class="progress-bar progress-bar-success"></div>
-                      </div>
+                    <li class="activity-danger">
+                      <time datetime="2015-12-10T20:42:40+07:00" class="fs-12 text-muted">2nd of December 2:00 PM</time>
+                      <p class="mt-10 mb-0">IM EDTs TLs Meeting</p>
                     </li>
-                    <li>
-                      <div class="block clearfix mb-5"><span class="pull-left fs-12">Javascript</span><span class="pull-right label label-outline label-purple">85%</span></div>
-                      <div class="progress progress-xs">
-                        <div role="progressbar" data-transitiongoal="85" class="progress-bar progress-bar-purple"></div>
-                      </div>
+                    <li class="activity-warning">
+                      <time datetime="2015-12-10T20:35:35+07:00" class="fs-12 text-muted">10th of December 12:00 PM</time>
+                      <p class="mt-10 mb-0">You <span class="text-danger"></span> OD Meeting</p>
+                    </li>
+                    <li class="activity-success">
+                      <time datetime="2015-12-10T20:27:48+07:00" class="fs-12 text-muted">10th of December 2:00 PM</time>
+                      <p class="mt-10 mb-0">MCM</p>
+                    </li>
+                    <li class="activity-primary">
+                      <time datetime="2015-12-10T20:22:48+07:00" class="fs-12 text-muted">15th of December 12:00 PM</time>
+                      <p class="mt-10 mb-0">MAHD</p>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+
+            <div class="col-md-7">
               <div class="widget clear">
-                <div class="widget-heading">
-                  <div class="media">
-                    <div class="media-left"><img src="static/build/images/users/10.jpg" alt="" class="media-object mo-lg img-circle"></div>
-                    <div class="media-body media-middle">
-                      <p class="mb-0"><span class="fw-500">Philip Fernandez</span> uploaded a new photo</p>
-                      <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:03 PM</time>
+             
+                  
+                  
+                   <div class="row">
+                <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-warning media">
+                    <div class="media-left media-middle"><i class="media-object ti-shopping-cart fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">New Applications</h6>
+                      <div class="fs-20">35 <span class="fs-12"><i class="ti-arrow-up fs-10"></i> 8%</span></div>
                     </div>
                   </div>
                 </div>
+                <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-success media">
+                    <div class="media-left media-middle"><i class="media-object ti-user fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Active Applications</h6>
+                      <div class="fs-20">135 <span class="fs-12"> </span></div>
+                    </div>
+                  </div>
+                </div>
+<!--
+                <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-danger media">
+                    <div class="media-left media-middle"><i class="media-object ti-trash fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Cancels</h6>
+                      <div class="fs-20">20 <span class="fs-12"><i class="ti-arrow-down fs-10"></i> 3%</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-warning media">
+                    <div class="media-left media-middle"><i class="media-object ti-paint-bucket fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Refunds</h6>
+                      <div class="fs-20">20 <span class="fs-12"><i class="ti-arrow-down fs-10"></i> 4%</span></div>
+                    </div>
+                  </div>
+                </div>
+-->
+                       
+<!--
+                <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-info media">
+                    <div class="media-left media-middle"><i class="media-object ti-direction-alt fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Chargebacks</h6>
+                      <div class="fs-20">24 <span class="fs-12"><i class="ti-arrow-down fs-10"></i> 2%</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-primary media">
+                    <div class="media-left media-middle"><i class="media-object ti-email fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Emails</h6>
+                      <div class="fs-20">6114 <span class="fs-12"><i class="ti-arrow-up fs-10"></i> 4%</span></div>
+                    </div>
+                  </div>
+                </div>
+-->                   <div class="col-md-4 col-sm-4">
+              <div class="widget text-center">
                 <div class="widget-body">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-                  <div class="thumbnail"><img src="static/build/images/backgrounds/02.jpg" alt="">
-                    <div class="text-right caption">
-                      <ul class="list-inline mb-0">
-                        <li><i class="ti-comment text-info"></i> 239</li>
-                        <li><i class="ti-heart text-danger"></i> 4325</li>
-                        <li><i class="ti-share text-success"></i> 3654</li>
-                      </ul>
+                  <div class="clearfix">
+                   
+                  </div>
+                  <h4 class="mb-5">APPLIED</h4>
+                  <div class="fs-30 fw-600 mb-20 counter">1,206</div>
+                  <div id="esp-user" data-percent="50" style="height: 140px; width: 140px; line-height: 120px; padding: 10px;" class="easy-pie-chart fs-36"><i class="fw-600 fs-36  mb-20 counter">600</i></div>
+                  <div class="clearfix mt-20">
+                    <div class="pull-lft">
+                      <div class="fs-18">PvsA</div>
+                      <div class="text-success">2.43%</div>
+                    </div>
+                    <div class="pull-right">
+<!--
+                      <div class="fs-12">Yesterday</div>
+                      <div class="text-danger">-1.02%</div>
+-->
                     </div>
                   </div>
-                  <ul class="media-list">
-                    <li class="media">
-                      <div class="media-left avatar"><img alt="" src="static/build/images/users/01.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                      <div class="media-body">
-                        <h5 class="media-heading inline-block">Philip Fernandez</h5>
-                        <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:12 PM</time>
-                        <p>Mission accomplished. It's revolutionary.</p>
-                        <div class="media">
-                          <div class="media-left avatar"><img alt="" src="static/build/images/users/12.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                          <div class="media-body">
-                            <h5 class="media-heading inline-block">Carolyn Hernandez</h5>
-                            <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:14 PM</time>
-                            <p>Vastly thought out! Found myself staring at it for minutes.</p>
-                            <div class="media">
-                              <div class="media-left avatar"><img alt="" src="static/build/images/users/11.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                              <div class="media-body">
-                                <h5 class="media-heading inline-block">Johnny Shaw</h5>
-                                <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:15 PM</time>
-                                <p>Let me take a napstatic. great colour palette, anyway.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="media">
-                          <div class="media-left avatar"><img alt="" src="static/build/images/users/14.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                          <div class="media-body">
-                            <h5 class="media-heading inline-block">Jean Boyd</h5>
-                            <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:14 PM</time>
-                            <p>
-                              This camera angle has navigated right into my heart.
-                              My 32 year old parent rates this icons very cool :)
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="widget clear">
-                <div class="widget-heading">
-                  <div class="media">
-                    <div class="media-left"><img src="static/build/images/users/12.jpg" alt="" class="media-object mo-lg img-circle"></div>
-                    <div class="media-body media-middle">
-                      <p class="mb-0"><span class="fw-500">Pamela Day</span> at <span class="fw-500">Los Angeles</span></p>
-                      <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 9:29 PM</time>
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-body">
-                  <p>Looks fun and good :-)</p>
-                  <div class="thumbnail">
-                    <div id="simpleMap" style="height:350px;"></div>
-                    <div class="text-right caption">
-                      <ul class="list-inline mb-0">
-                        <li><i class="ti-comment text-info"></i> 43</li>
-                        <li><i class="ti-heart text-danger"></i> 437</li>
-                        <li><i class="ti-share text-success"></i> 651</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <ul class="media-list">
-                    <li class="media">
-                      <div class="media-left avatar"><img alt="" src="static/build/images/users/01.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                      <div class="media-body">
-                        <h5 class="media-heading inline-block">Philip Fernandez</h5>
-                        <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:12 PM</time>
-                        <p>Mission accomplished. It's revolutionary.</p>
-                        <div class="media">
-                          <div class="media-left avatar"><img alt="" src="static/build/images/users/12.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                          <div class="media-body">
-                            <h5 class="media-heading inline-block">Carolyn Hernandez</h5>
-                            <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:14 PM</time>
-                            <p>Vastly thought out! Found myself staring at it for minutes.</p>
-                            <div class="media">
-                              <div class="media-left avatar"><img alt="" src="static/build/images/users/11.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                              <div class="media-body">
-                                <h5 class="media-heading inline-block">Johnny Shaw</h5>
-                                <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:15 PM</time>
-                                <p>Let me take a napstatic. great colour palette, anyway.</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="media">
-                          <div class="media-left avatar"><img alt="" src="static/build/images/users/14.jpg" class="media-object img-circle"><span class="status bg-success"></span></div>
-                          <div class="media-body">
-                            <h5 class="media-heading inline-block">Jean Boyd</h5>
-                            <time datetime="2015-12-10T20:50:48+07:00" class="text-muted fs-12">20 Jan 2016 <i class="ti-time"></i> 12:14 PM</time>
-                            <p>
-                              This camera angle has navigated right into my heart.
-                              My 32 year old parent rates this icons very cool :)
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="widget clear">
-                <div class="widget-heading">
-                  <h3 class="widget-title">Team member</h3>
-                </div>
+                        <div class="col-md-4 col-sm-4">
+              <div class="widget text-center">
                 <div class="widget-body">
-                  <ul class="media-list mb-0">
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                        <div class="media-left avatar"><img src="static/build/images/users/10.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                        <div class="media-body">
-                          <h5 class="media-heading">Philip Fernandez</h5>
-                          <p class="text-muted mb-0">489 Rhapsody Street</p>
-                        </div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                        <div class="media-left avatar"><img src="static/build/images/users/20.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                        <div class="media-body">
-                          <h5 class="media-heading">Mary Carr</h5>
-                          <p class="text-muted mb-0">3611 West Fork Drive</p>
-                        </div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                        <div class="media-left avatar"><img src="static/build/images/users/11.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
-                        <div class="media-body">
-                          <h5 class="media-heading">Joseph Salazar</h5>
-                          <p class="text-muted mb-0">4489 Hart Ridge Road</p>
-                        </div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                        <div class="media-left avatar"><img src="static/build/images/users/06.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
-                        <div class="media-body">
-                          <h5 class="media-heading">John Cruz</h5>
-                          <p class="text-muted mb-0">3274 Lyndon Street</p>
-                        </div></a></li>
-                    <li class="media"><a href="javascript:;" class="conversation-toggle">
-                        <div class="media-left avatar"><img src="static/build/images/users/19.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
-                        <div class="media-body">
-                          <h5 class="media-heading">Jacqueline Rios</h5>
-                          <p class="text-muted mb-0">559 Holly Street</p>
-                        </div></a></li>
-                  </ul>
+                  <div class="clearfix">
+                   
+                  </div>
+                  <h4 class="mb-5">ACCEPTED</h4>
+                  <div class="fs-30 fw-600 mb-20 counter">1,206</div>
+                  <div id="esp-photo" data-percent="40" style="height: 140px; width: 140px; line-height: 120px; padding: 10px;" class="easy-pie-chart fs-36"><i class="fw-600 fs-36  mb-20 counter">300</i></div>
+                  <div class="clearfix mt-20">
+                    <div class="pull-lft">
+                      <div class="fs-18">PvsA</div>
+                      <div class="text-success">2.43%</div>
+                    </div>
+                    <div class="pull-right">
+<!--
+                      <div class="fs-12">Yesterday</div>
+                      <div class="text-danger">-1.02%</div>
+-->
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="widget clear">
-                <div class="widget-heading">
-                  <h3 class="widget-title">Activities</h3>
-                </div>
+            </div>
+                        <div class="col-md-4 col-sm-4">
+              <div class="widget text-center">
                 <div class="widget-body">
-                  <ul class="media-list mb-0">
-                    <li class="media">
-                      <div class="media-left"><i class="ti-control-record text-info"></i></div>
-                      <div class="media-body">
-                        <p>Recommended Karen Ortega</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-control-record text-danger"></i></div>
-                      <div class="media-body">
-                        <p>Retweeted George Lewis</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-control-record text-warning"></i></div>
-                      <div class="media-body">
-                        <p>Followed Olivia Williamson</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-control-record text-success"></i></div>
-                      <div class="media-body">
-                        <p>Replied to Janice Davis</p>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <div class="media-left"><i class="ti-control-record text-primary"></i></div>
-                      <div class="media-body">
-                        <p>Favorited Arthur Gomez</p>
-                      </div>
-                    </li>
-                  </ul>
+                  <div class="clearfix">
+                   
+                  </div>
+                  <h4 class="mb-5">APPROVED</h4>
+                  <div class="fs-30 fw-600 mb-20 counter">1,206</div>
+                  <div id="esp-feedback" data-percent="35" style="height: 140px; width: 140px; line-height: 120px; padding: 10px;" class="easy-pie-chart fs-36"><i class="fw-600 fs-36  mb-20 counter">250</i></div>
+                  <div class="clearfix mt-20">
+                    <div class="pull-lft">
+                      <div class="fs-18">PvsA</div>
+                      <div class="text-success">15.43%</div>
+                    </div>
+                    <div class="pull-right">
+<!--
+                      <div class="fs-12">Yesterday</div>
+                      <div class="text-danger">-1.02%</div>
+-->
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+                        <div class="col-md-6 col-sm-6">
+              <div class="widget text-center">
+                <div class="widget-body">
+                  <div class="clearfix">
+                   
+                  </div>
+                  <h4 class="mb-5">REALIZED</h4>
+                  <div class="fs-30 fw-600 mb-20 counter">1,206</div>
+                  <div id="esp-re" data-percent="20" style="height: 140px; width: 140px; line-height: 120px; padding: 10px;" class="easy-pie-chart fs-6"><i class="fw-600 fs-30  mb-20 counter">224</i></div>
+                  <div class="clearfix mt-20">
+                    <div class="pull-lft">
+                      <div class="fs-18">PvsA</div>
+                      <div class="text-success">12.43%</div>
+                    </div>
+                    <div class="pull-right">
+<!--
+                      <div class="fs-12">Yesterday</div>
+                      <div class="text-danger">-1.02%</div>
+-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                        <div class="col-md-6 col-sm-6">
+              <div class="widget text-center">
+                <div class="widget-body">
+                  <div class="clearfix">
+                  </div>
+                  <h4 class="mb-5">COMPLETED</h4>
+                  <div class="fs-30 fw-600 mb-20 counter">1,206</div>
+                  <div id="esp-comment" data-percent="15" style="height: 140px; width: 140px; line-height: 120px; padding: 10px;" class="easy-pie-chart fs-36"><i class="fw-600 fs-30  mb-20 counter">200</i></div>
+                  <div class="clearfix mt-20">
+                    <div class="pul-left">
+                      <div class="fs-18">PvsA</div>
+                      <div class="text-success">20.43%</div>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+                       <div class="col-md-12 ">
+                           
+                           
+<!--
+                                <div class="widget no-border p-15 bg-info media">
+                <div class="media">
+                  <div class="media-left media-middle pr-15"><i class="ti-pulse fs-60"></i></div>
+                  <div class="media-body">
+                    <ul class="list-unstyled fs-12 mb-0">
+                      <li class="pt-5 pb-5">
+                        <div class="block clearfix mb-5"><span class="pull-left text-white">Applied</span><span class="text-white m-30">200/250</span><span class="pull-right text-success ">80 %</span></div>
+                        <div class="progress progress-xs bg-light mb-0">
+                          <div role="progressbar" data-transitiongoal="80" aria-valuenow="65" style="width: 65%;" class="progress-bar progress-bar-white"></div>
+                        </div>
+                      </li>
+                      <li class="pt-5 pb-5">
+                        <div class="block clearfix mb-5"><span class="pull-left text-white">Accepted</span><span class="text-white m-30">150/200</span><span class="pull-right text-success">70 %</span></div>
+                        <div class="progress progress-xs bg-light mb-0">
+                          <div role="progressbar" data-transitiongoal="70" aria-valuenow="80" style="width: 80%;" class="progress-bar progress-bar-white"></div>
+                        </div>
+                      </li>
+                         <li class="pt-5 pb-5">
+                        <div class="block clearfix mb-5"><span class="pull-left text-white">Approved</span><span class="text-white m-30">75/150</span><span class="pull-right text-warning">50%</span></div>
+                        <div class="progress progress-xs bg-light mb-0">
+                          <div role="progressbar" data-transitiongoal="50" aria-valuenow="80" style="width: 80%;" class="progress-bar progress-bar-white"></div>
+                        </div>
+                      </li>
+                         
+                         <li class="pt-5 pb-5">
+                        <div class="block clearfix mb-5"><span class="pull-left text-white">Realized</span><span class="text-white m-30">60/100</span><span class="pull-right text-warning">60 %</span></div>
+                        <div class="progress progress-xs bg-light mb-0">
+                          <div role="progressbar" data-transitiongoal="60" aria-valuenow="80" style="width: 80%;" class="progress-bar progress-bar-white"></div>
+                        </div>
+                      </li>
+                         <li class="pt-5 pb-5">
+                        <div class="block clearfix mb-5"><span class="pull-left text-white">Complete</span><span class="text-white m-30">25/60</span><span class="pull-right text-danger">41 %</span></div>
+                        <div class="progress progress-xs bg-light mb-0">
+                          <div role="progressbar" data-transitiongoal="41" aria-valuenow="8" style="width: 80%;" class="progress-bar progress-bar-white"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+-->
+                            <div class="widget noborder">
+             
+                <div class="text-center p-20 bd-l bd-r">
+                  <h4 class="text-success ">TASKS</h4>
+                 
+                </div>
+                <div class="row row-0 p-15 text-center bg-black">
+                  <div class="col-xs-3">
+                    <div class="fs-20 fw-500">30</div>
+                    <div class="text">Assigned</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="fs-20 fw-500">10</div>
+                    <div class="text-muted">Submitted</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="fs-20 fw-500">5</div>
+                    <div class="text-muted">Submitted Late</div>
+                  </div>
+                    <div class="col-xs-3">
+                    <div class="fs-20 fw-500">15</div>
+                    <div class="text-muted">In Progress</div>
+                  </div>
+                </div>
+              </div>
+                            <div class="widget no-border bg-info overlay-container"><img src="../build/images/background\s/24.jpg" alt="" class="overlay-bg img-responsive">
+                <div class="overlay-content p-30">
+                  <div class="media mb-20">
+                    <div class="media-left">
+                      <div class="fs-30 fw-0 lh-1 ">Touch Points Attended</div>
+                    </div>
+                    <div class="media-body media-middle">
+                      <p class="fs-20 m-30">20  / 30 </p>
+                     
+                    </div>
+                  </div>
+                  <div class="progress progress-xs mb-10 bg-light">
+                    <div role="progressbar" data-transitiongoal="67" class="progress-bar progress-bar-white"></div>
+                  </div>
+                  <p class="fs-18 mb-0">67.7%</p>
+                </div>
+              </div>
+              </div>
+               
+              </div>
+             </div>
+            </div>
+             
+              </div>
+<div id="profile8" role="tabpanel" aria-labelledby="profile-tab8" class="tab-pane fade">
+                        <div class="widget-body">
+                  
+                  <div role="tabpanel" class="col-md-10 pull right">
+                    <ul role="tablist" class="nav nav-pills mb-15">
+
+                      <li role="preseztation" class="dropdown active pull-right"><a id="myTabDrop2" href="#" data-toggle="dropdown" aria-controls="myTabDrop2-contents" aria-expanded="false" class="dropdown-toggle">Month <span class="caret"></span></a>
+                        <ul id="myTabDrop2-contents" role="menu" aria-labelledby="myTabDrop2" class="dropdown-menu">
+                          <li><a id="dropdown1-tab" href="#dropdown1" tabindex="0" role="tab" data-toggle="tab" aria-controls="dropdown3" aria-expanded="false">August</a></li>
+                          <li><a id="dropdown2-tab" href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab" aria-controls="dropdown4" aria-expanded="true">September</a></li>
+                             <li><a id="dropdown3-tab" href="#dropdown3" tabindex="-2" role="tab" data-toggle="tab" aria-controls="dropdown4" aria-expanded="true">October</a></li>
+                             <li><a id="dropdown4-tab" href="#dropdown4" tabindex="-3" role="tab" data-toggle="tab" aria-controls="dropdown4" aria-expanded="true">November</a></li>
+                             <li><a id="dropdown5-tab" href="#dropdown5" tabindex="-4" role="tab" data-toggle="tab" aria-controls="dropdown4" aria-expanded="true">December</a></li>
+                            <li><a id="dropdown7-tab" href="#dropdown7" tabindex="-4" role="tab" data-toggle="tab" aria-controls="dropdown4" aria-expanded="true">January</a></li>
+                            <li><a id="dropdown6-tab" href="#dropdown6" tabindex="0" role="tab" data-toggle="tab" aria-controls="dropdown3" aria-expanded="false">Overall</a></li>
+                            
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div id="dropdown1" role="tabpanel" aria-labelledby="dropdown1-tab" class="tab-pane fade active in">
+           <h3 class="text-center">August</h3>
+                          <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-heading">
+                  <h3 class="widget-title text-center" >Productivity</h3>
+                </div>
+                <div class="widget-body">
+                    <canvas id="prod"></canvas>
+                  <div id="prod" class="mb-10"></div>
+                
+                </div>
+              </div>
+            </div>
+                        <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-heading">
+                  <h3 class="widget-title text-center" >NPS</h3>
+                </div>
+                <div class="widget-body">
+                    <canvas id="nps"></canvas>
+                  <div id="nps" class="mb-10"></div>
+                
+                </div>
+              </div>
+                            
+                            
+            </div>
+                          <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-success media">
+                    <div class="media-left media-middle"><i class="media-object ti-user fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Average Poductivity</h6>
+                      <div class="fs-20">5 <span class="fs-12"></span></div>
+                    </div>
+                  </div>
+                </div>
+                          <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-primary media">
+                    <div class="media-left media-middle"><i class="media-object ti-user fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Average NPS</h6>
+                      <div class="fs-20">60 <span class="fs-12"> </span></div>
+                    </div>
+                  </div>
+                </div>
+                          <div class="col-md-12">
+              <div class="widget">
+                <div class="widget-heading">
+                  <h3 class="widget-title text-center">Team Standards Implementation</h3>
+                </div>
+                <div class="widget-body">
+                  <div class="progress ">
+                    <div id="progress-bar-1" role="progressbar" data-transitiongoal="75" class="progress-bar progress-bar-primry">Building - 75%</div>
+                  </div>
+                  <div class="progress">
+                    <div id="progress-bar-2" role="progressbar" data-transitiongoal="50" class="progress-bar progress-bar-success">Performing - 50%</div>
+                  </div>
+                  <div class="progress ">
+                    <div id="progress-bar-3" role="progressbar" data-transitiongoal="30" class="progress-bar progress-bar-info"> Closing - 30%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                            </div>
+                      <div id="dropdown2" role="tabpanel" aria-labelledby="dropdown2-tab" class="tab-pane fade">
+                     <h3 class="text-center">August</h3>
+                          <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-heading">
+                  <h3 class="widget-title text-center" >Productivity</h3>
+                </div>
+                <div class="widget-body">
+                    <canvas id="prod"></canvas>
+                  <div id="prod" class="mb-10"></div>
+                
+                </div>
+              </div>
+            </div>
+                        <div class="col-md-6">
+              <div class="widget">
+                <div class="widget-heading">
+                  <h3 class="widget-title text-center" >NPS</h3>
+                </div>
+                <div class="widget-body">
+                    <canvas id="nps"></canvas>
+                  <div id="nps" class="mb-10"></div>
+                
+                </div>
+              </div>
+                            
+                            
+            </div>
+                          <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-success media">
+                    <div class="media-left media-middle"><i class="media-object ti-user fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Average Poductivity</h6>
+                      <div class="fs-20">5 <span class="fs-12"></span></div>
+                    </div>
+                  </div>
+                </div>
+                          <div class="col-sm-6">
+                  <div class="widget no-border p-15 bg-primary media">
+                    <div class="media-left media-middle"><i class="media-object ti-user fs-36"></i></div>
+                    <div class="media-body">
+                      <h6 class="m-0">Average NPS</h6>
+                      <div class="fs-20">60 <span class="fs-12"> </span></div>
+                    </div>
+                  </div>
+                </div>
+                          <div class="col-md-12">
+              <div class="widget">
+                <div class="widget-heading">
+                  <h3 class="widget-title text-center">Team Standards Implementation</h3>
+                </div>
+                <div class="widget-body">
+                  <div class="progress ">
+                    <div id="progress-bar-4" role="progressbar" data-transitiongoal="75" class="progress-bar progress-bar-primry">Building - 75%</div>
+                  </div>
+                  <div class="progress">
+                    <div id="progress-bar-5" role="progressbar" data-transitiongoal="50" class="progress-bar progress-bar-success">Performing - 50%</div>
+                  </div>
+                  <div class="progress ">
+                    <div id="progress-bar-6" role="progressbar" data-transitiongoal="30" class="progress-bar progress-bar-info"> Closing - 30%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                      </div>
+                      <div id="dropdown3" role="tabpanel" aria-labelledby="dropdown3-tab" class="tab-pane fade">
+                        <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer.</p>
+                      </div>
+                      <div id="dropdown4" role="tabpanel" aria-labelledby="dropdown4-tab" class="tab-pane fade">
+                        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY.</p>
+                      </div>
+                        <div id="dropdown5" role="tabpanel" aria-labelledby="dropdown5-tab" class="tab-pane fade">
+                        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY.</p>
+                      </div>
+                        <div id="dropdown6" role="tabpanel" aria-labelledby="dropdown6-tab" class="tab-pane fade">
+                        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY.</p>
+                      </div>
+                        <div id="dropdown7" role="tabpanel" aria-labelledby="dropdown7-tab" class="tab-pane fade">
+                        <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY.</p>
+                      </div>
+                    </div>
+                
+                </div>
+                      </div>
+               </div>
+               <div id="profile9" role="tabpanel" aria-labelledby="profile-tab9" class="tab-pane fade">
+                <div class="col-sm-10">
+                   <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h5 class="panel-title">Profile info </h5>
+                </div>
+               
+              </div>
+                   
+                   </div>
+                   <div class="col-sm-4">
+                    <div class="panel-body">
+                      <p>Name:</p> 
+                      <p>Gender:</p> 
+                        <p>DOB:</p>
+                       
+                        <p>Email:</p>
+                    <p>University:</p>
+                        <p>University:</p>
+                    
+                      
+                        <p>Faculty:</p>
+                        
+                        <p>Signed Up on:</p>
+                        
+                        <p>CV:</p>
+                        
+                        <p>Products interersted in:</p>
+                </div>
+                   </div> 
+                   
+                    
+                    <div class="col-sm-5 ">   
+                        <div class="panel-body">
+                    <p>Saif Elnewehy</p> 
+                      <p>Male</p> 
+                        <p>17-08-1998</p>
+                       
+                        <p>saif.elnewehy@aiesec.net.eg</p>
+                     <p>Friend</p>
+                        <p>Tanta Univeristy</p>
+                    
+                       
+                        <p>Computer Engineering</p>
+                        
+                        <p>10-11-2016</p>
+                        
+                            <p><a href="https://www.linkedin.com/in/selnewehy/"><small>CV</small></a></p>
+                        
+                        <p><a class="bg-danger">GV</a> </p>
+                </div>
+                   </div>
+                      </div>
+               
+               <div id="profile10" role="tabpanel" aria-labelledby="profile-tab10" class="tab-pane fade">
+                       <div class= col-sm-10>
+                          <div class="widget">
+            <div class="widget-heading">
+              <h3 class="widget-title">Applications</h3>
+            </div>
+            <div class="widget-body">
+              <form>
+                <div class="row">
+<!--
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="txtOrderID">Order ID</label>
+                      <input id="txtOrderID" type="text" class="form-control">
+                    </div>
+                  </div>
+-->
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="ddlStatus">Status</label>
+                      <select id="ddlStatus" class="form-control">
+                        <option value="*">Choose</option>
+                        <option value="0">Applied</option>
+                        <option value="7">Accepted</option>
+                        <option value="9">Approved</option>
+                        <option value="13">Realized</option>
+                        <option value="5">Finished</option>
+                        <option value="8">Complete</option>
+                        <option value="14">Rejected</option>
+                        <option value="10">Withdrawn</option>
+                       
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="date-addedd">Date Applied</label>
+                      <div class="input-group">
+                        <input id="date-added" type="text" class="form-control"><span class="input-group-addon"><span class="ti-calendar"></span></span>
+                      </div>
+                    </div>
+                  </div>
+                      <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="date-added">Date Accepted</label>
+                      <div class="input-group">
+                        <input id="date-added" type="text" class="form-control"><span class="input-group-addon"><span class="ti-calendar"></span></span>
+                      </div>
+                    </div>
+                  </div>
+                      <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="date-added">Date Approved</label>
+                      <div class="input-group">
+                        <input id="date-added" type="text" class="form-control"><span class="input-group-addon"><span class="ti-calendar"></span></span>
+                      </div>
+                    </div>
+                  </div>
+                    
+                      <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="date-added">Date Realized</label>
+                      <div class="input-group">
+                        <input id="date-added" type="text" class="form-control"><span class="input-group-addon"><span class="ti-calendar"></span></span>
+                      </div>
+                    </div>
+                  </div>
+                      <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="date-added">Date Finished</label>
+                      <div class="input-group">
+                        <input id="date-added" type="text" class="form-control"><span class="input-group-addon"><span class="ti-calendar"></span></span>
+                      </div>
+                    </div>
+                  </div>
+                    
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="txtCustomer">EP Name</label>
+                      <input id="txtCustomer" type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="txtTotal"> Home LC</label>
+                      <input id="txtTotal" type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="txtTotal">Home MC</label>
+                      <input id="txtTotal" type="text" class="form-control">
+                    </div>
+                  </div>
+                      <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="txtTotal"> Host LC</label>
+                      <input id="txtTotal" type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="txtTotal">Host MC</label>
+                      <input id="txtTotal" type="text" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="mb-15 btn btn-raised btn-success">Filter</button>
+              </form>
+              <table id="order-list" style="width: 100%" class="table table-hover dt-responsive nowrap">
+                <thead>
+                  <tr>
+                    <th class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="checkAll" type="checkbox" value="option1">
+                        <label for="checkAll" class="pl-0">&nbsp;</label>
+                      </div>
+                    </th>
+                    <th>Application ID</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th class="text-right">TN Fees</th>
+                    <th class="text-center">Date Applied</th>
+                    <th class="text-center">Date Approved</th>
+                    <th class="text-center">Action</th>
+                      
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-01" type="checkbox" value="01">
+                        <label for="product-01" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986752</td>
+                    <td>Mildred Burton</td>
+                    <td><span class="label label-warning">Applied</span></td>
+                    <td class="text-right">$100</td>
+                    <td class="text-center">04/19/2020</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        
+                      </div>
+                    </td>
+                  </tr>
+                       <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-01" type="checkbox" value="01">
+                        <label for="product-01" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986752</td>
+                    <td>Mildred Burton</td>
+                    <td><span class="label label-warning">Applied</span></td>
+                    <td class="text-right">$100</td>
+                    <td class="text-center">04/19/2020</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                   
+                      </div>
+                    </td>
+                  </tr>
+                      <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-02" type="checkbox" value="02">
+                        <label for="product-02" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986754</td>
+                    <td>Brandon Contreras</td>
+                    <td><span class="label label-info">Accepted</span></td>
+                    <td class="text-right">$450</td>
+                    <td class="text-center">07/19/2020</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                    
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-02" type="checkbox" value="02">
+                        <label for="product-02" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986754</td>
+                    <td>Brandon Contreras</td>
+                    <td><span class="label label-info">Accepted</span></td>
+                    <td class="text-right">$450</td>
+                    <td class="text-center">07/19/2020</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                     
+                      </div>
+                    </td>
+                  </tr>    <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-03" type="checkbox" value="03">
+                        <label for="product-03" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986757</td>
+                    <td>Linda Ramos</td>
+                    <td><span class="label label-success">Approved</span></td>
+                    <td class="text-right">$450</td>
+                    <td class="text-center">12/19/2020</td>
+                    <td class="text-center">12/23/2020</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                   
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-03" type="checkbox" value="03">
+                        <label for="product-03" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986757</td>
+                    <td>Linda Ramos</td>
+                    <td><span class="label label-success">Approved</span></td>
+                    <td class="text-right">$450</td>
+                    <td class="text-center">12/19/2020</td>
+                    <td class="text-center">12/23/2020</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                     
+                      </div>
+                    </td>
+                  </tr>
+                         <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-04" type="checkbox" value="04">
+                        <label for="product-04" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986750</td>
+                    <td>Thomas Green</td>
+                    <td><span class="label label-danger">Rejected</span></td>
+                    <td class="text-right">$150</td>
+                    <td class="text-center">04/19/2020</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                     
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-04" type="checkbox" value="04">
+                        <label for="product-04" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>4986750</td>
+                    <td>Thomas Green</td>
+                    <td><span class="label label-danger">Rejected</span></td>
+                    <td class="text-right">$150</td>
+                    <td class="text-center">04/19/2020</td>
+                    <td class="text-center">-</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                  
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-05" type="checkbox" value="05">
+                        <label for="product-05" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00005</td>
+                    <td>Amy Douglas</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$89.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-06" type="checkbox" value="06">
+                        <label for="product-06" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00006</td>
+                    <td>Raymond Stewart</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$46.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-07" type="checkbox" value="07">
+                        <label for="product-07" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00007</td>
+                    <td>Ann Lewis</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$700.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-08" type="checkbox" value="08">
+                        <label for="product-08" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00008</td>
+                    <td>Amber Howard</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$250.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-09" type="checkbox" value="09">
+                        <label for="product-09" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00009</td>
+                    <td>Ralph White</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$20.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-10" type="checkbox" value="10">
+                        <label for="product-10" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00010</td>
+                    <td>Bryan Stevens</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$20.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-11" type="checkbox" value="11">
+                        <label for="product-11" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00011</td>
+                    <td>Dylan Holmes</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$90.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-12" type="checkbox" value="12">
+                        <label for="product-12" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00012</td>
+                    <td>Jessica Peters</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$46.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-13" type="checkbox" value="13">
+                        <label for="product-13" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00013</td>
+                    <td>Barbara Carpenter</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$80.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-14" type="checkbox" value="14">
+                        <label for="product-14" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00014</td>
+                    <td>Diane Castillo</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$40.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-15" type="checkbox" value="15">
+                        <label for="product-15" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00015</td>
+                    <td>Andrea Davis</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$60.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-16" type="checkbox" value="16">
+                        <label for="product-16" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00016</td>
+                    <td>Adam Berry</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$32.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-17" type="checkbox" value="17">
+                        <label for="product-17" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00017</td>
+                    <td>Sandra Evans</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$59.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-18" type="checkbox" value="18">
+                        <label for="product-18" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00018</td>
+                    <td>Lori Cooper</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$80.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-19" type="checkbox" value="19">
+                        <label for="product-19" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00019</td>
+                    <td>Willie Riley</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$80.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-20" type="checkbox" value="20">
+                        <label for="product-20" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00020</td>
+                    <td>Betty Roberts</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$100.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-21" type="checkbox" value="21">
+                        <label for="product-21" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00021</td>
+                    <td>Daniel Walsh</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$120.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">
+                      <div class="checkbox-custom">
+                        <input id="product-22" type="checkbox" value="22">
+                        <label for="product-22" class="pl-0">&nbsp;</label>
+                      </div>
+                    </td>
+                    <td>#U00022</td>
+                    <td>Janice Jimenez</td>
+                    <td><span class="label label-warning">Pending</span></td>
+                    <td class="text-right">$40.00</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">04/19/2016</td>
+                    <td class="text-center">
+                      <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
+                        <button type="button" class="btn btn-outline btn-success"><i class="ti-pencil"></i></button>
+                        <button type="button" class="btn btn-outline btn-danger"><i class="ti-trash"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
+                   </div>
+                      </div>
+              </div>
+                      
         </div>
-        <div class="footer">2016 &copy;  <a href="http://themeforest.net/item/umega-responsive-web-app-kit/15482080">Umega - Responsive Web App Kit</a> by <a href="http://themeforest.net/user/lethemes" target="_blank">Lethemes.</a></div>
+        <div class="footer">2020 &copy;  <a href="http://themeforest.net/item/umega-responsive-web-app-kit/15482080">CRM Tool</a> Developed by <a href="https://tanta.edu.eg/" target="_blank">Tanta Univeristy Team</a></div>
       </div>
       <!-- Right Sidebar start-->
       <aside class="right-sidebar closed">
@@ -764,69 +1744,69 @@
           <div id="chat" role="tabpanel" class="tab-pane fade in active">
             <form>
               <div class="form-group has-feedback">
-                <input type="text" aria-describedby="inputChatSearch" placeholder="Chat withstatic." class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputChatSearch" class="sr-only">(default)</span>
+                <input type="text" aria-describedby="inputChatSearch" placeholder="Chat with..." class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputChatSearch" class="sr-only">(default)</span>
               </div>
             </form>
             <ul class="chat-list mb-0 fs-12 media-list">
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/20.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/20.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Jane Curtis</h6>
                     <p class="text-muted mb-0">Where are you from?</p>
                   </div>
                   <div class="media-right"><span class="badge bg-danger">2</span></div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/01.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/01.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Edward Garcia</h6>
                     <p class="text-muted mb-0">Nice to meet you.</p>
                   </div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/02.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/02.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Bruce Olson</h6>
                     <p class="text-muted mb-0">What do you want to do?</p>
                   </div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/03.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/03.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Martha Rodriguez</h6>
                     <p class="text-muted mb-0">I'm hungry.</p>
                   </div>
                   <div class="media-right"><span class="badge bg-danger">1</span></div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/05.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/05.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Hannah Williamson</h6>
                     <p class="text-muted mb-0">Do you know the address?</p>
                   </div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/06.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/06.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Anthony Mills</h6>
                     <p class="text-muted mb-0">No problem.</p>
                   </div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/07.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/07.jpg" alt="" class="media-object img-circle"><span class="status bg-warning"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Ethan Stanley</h6>
                     <p class="text-muted mb-0">Hello?</p>
                   </div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/08.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/08.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Jonathan Castro</h6>
                     <p class="text-muted mb-0">OK. Thanks.</p>
                   </div>
                   <div class="media-right"><span class="badge bg-danger">1</span></div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/09.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/09.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Denise Rose</h6>
                     <p class="text-muted mb-0">Bye bye.</p>
                   </div></a></li>
               <li class="media"><a href="javascript:;" class="conversation-toggle">
-                  <div class="media-left avatar"><img src="static/build/images/users/10.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
+                  <div class="media-left avatar"><img src="../build/images/users/10.jpg" alt="" class="media-object img-circle"><span class="status bg-danger"></span></div>
                   <div class="media-body">
                     <h6 class="media-heading">Eugene Meyer</h6>
                     <p class="text-muted mb-0">How are you?</p>
@@ -946,7 +1926,7 @@
         <h5 class="text-center m-0 p-20">Edward Garcia<a href="javascript:;" class="conversation-toggle pull-left"><i class="ti-arrow-left text-muted"></i></a><a href="javascript:;" class="pull-right"><i class="ti-pencil text-muted"></i></a></h5>
         <ul data-mcs-theme="minimal-dark" class="media-list chat-content fs-12 pl-20 pr-20 mCustomScrollbar">
           <li class="media">
-            <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-left avatar"><img src="../build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
             <div class="media-body">
               <p>Hello.</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">09:45 PM <i class="ti-check text-success"></i></time>
@@ -957,10 +1937,10 @@
               <p>Hi.</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">09:46 PM <i class="ti-check text-success"></i></time>
             </div>
-            <div class="media-right avatar"><img src="static/build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-right avatar"><img src="../build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
           </li>
           <li class="media">
-            <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-left avatar"><img src="../build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
             <div class="media-body">
               <p>How are you?</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">09:47 PM <i class="ti-check text-success"></i></time>
@@ -971,10 +1951,10 @@
               <p>I'm good. How are you?</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">09:50 PM <i class="ti-check text-success"></i></time>
             </div>
-            <div class="media-right avatar"><img src="static/build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-right avatar"><img src="../build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
           </li>
           <li class="media">
-            <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-left avatar"><img src="../build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
             <div class="media-body">
               <p>Good. Do you speak English?</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">09:55 PM <i class="ti-check text-success"></i></time>
@@ -985,10 +1965,10 @@
               <p>A little. Are you American?</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">09:56 PM <i class="ti-check text-success"></i></time>
             </div>
-            <div class="media-right avatar"><img src="static/build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-right avatar"><img src="../build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
           </li>
           <li class="media">
-            <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-left avatar"><img src="../build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
             <div class="media-body">
               <p>Yes.</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">10:00 PM <i class="ti-check text-success"></i></time>
@@ -999,10 +1979,10 @@
               <p>Where are you from?</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">10:01 PM <i class="ti-check text-success"></i></time>
             </div>
-            <div class="media-right avatar"><img src="static/build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-right avatar"><img src="../build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
           </li>
           <li class="media">
-            <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-left avatar"><img src="../build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
             <div class="media-body">
               <p>I'm from California.</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">10:03 PM <i class="ti-check text-success"></i></time>
@@ -1013,10 +1993,10 @@
               <p>Nice to meet you.</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted pull-right">10:04 PM <i class="ti-check text-success"></i></time>
             </div>
-            <div class="media-right avatar"><img src="static/build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-right avatar"><img src="../build/images/users/18.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
           </li>
           <li class="media">
-            <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
+            <div class="media-left avatar"><img src="../build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
             <div class="media-body">
               <p>Nice to meet you too.</p>
               <time datetime="2015-12-10T20:50:48+07:00" class="fs-11 text-muted">10:05 PM <i class="ti-check text-success"></i></time>
@@ -1032,22 +2012,173 @@
       <!-- Right Sidebar end-->
     </div>
     <!-- jQuery-->
-    <script type="text/javascript" src="static/plugins/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../plugins/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap JavaScript-->
-    <script type="text/javascript" src="static/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../plugins/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Malihu Scrollbar-->
-    <script type="text/javascript" src="static/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Animo.js-->
-    <script type="text/javascript" src="static/plugins/animo.js/animo.min.js"></script>
+    <script type="text/javascript" src="../plugins/animo.js/animo.min.js"></script>
     <!-- Bootstrap Progressbar-->
-    <script type="text/javascript" src="static/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script type="text/javascript" src="../plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- jQuery Easy Pie Chart-->
-    <script type="text/javascript" src="static/plugins/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="../plugins/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
     <!-- Google maps-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=weather"></script>
     <!-- Custom JS-->
-    <script type="text/javascript" src="static/build/js/fourth-layout/app.js"></script>
-    <script type="text/javascript" src="static/build/js/fourth-layout/demo.js"></script>
-    <script type="text/javascript" src="static/build/js/page-content/user-pages/profile.js"></script>
+    <script type="text/javascript" src="../build/js/fourth-layout/app.js"></script>
+    <script type="text/javascript" src="../build/js/fourth-layout/demo.js"></script>
+    <script type="text/javascript" src="../build/js/page-content/user-pages/profile.js"></script>
+       <!-- Flot Charts-->
+  <script type="text/javascript" src="../plugins/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.stack.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.time.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.symbol.js"></script>
+    <script type="text/javascript" src="../plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+      
+<!--      <canvas id="pro" width="400" height="400"></canvas>-->
+<script>
+  
+
+//	$('#date-addedd, #date-modified').daterangepicker({
+//		singleDatePicker: true,
+//	});
+//
+//	// Order List
+//	// --------------------------------------------------
+//
+//	var table = document.getElementById('order-list').DataTable({
+//		pageLength: 10,
+//		colReorder: true,
+//		buttons: ['copy', 'excel', 'pdf', 'print'],
+//		searching: false,
+//		aLengthMenu: [
+//			[10, 20, 50, -1],
+//			[10, 20, 50, 'All']
+//		],
+//		order: [
+//			[1, 'asc']
+//		],
+//		columnDefs: [{
+//			orderable: false,
+//			targets: [0, 7]
+//		}]
+//
+//	$('#order-list_wrapper .col-sm-6:eq(1)').addClass('text-right');
+//	table.buttons().container().appendTo('#order-list_wrapper .col-sm-6:eq(1)');
+//
+//});
+    
+var ctx = document.getElementById('prod').getContext('2d');
+    var stackedBar = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['Aditya', 'Nour', 'Vanshika', 'Ali'],
+        datasets: [{
+            label: '',
+            data: [4, 6, 5, 2],
+            backgroundColor: [
+                '#8a2121',
+                '#8E23E0',
+                '#0667D6',
+                '#17A88B',
+                '#E5343D',
+                ''
+            ],
+//            borderColor: [
+//                'rgba(255, 99, 132, 1)',
+//                'rgba(54, 162, 235, 1)',
+//                'rgba(255, 206, 86, 1)',
+//                'rgba(75, 192, 192, 1)',
+//                'rgba(153, 102, 255, 1)',
+//                'rgba(255, 159, 64, 1)'
+//            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        legend:{display: false}
+        ,
+        scales: {
+            labelString: '',
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }
+});
+       
+    var ctb = document.getElementById('nps').getContext('2d');
+    var stackedBar = new Chart(ctb, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['Aditya', 'Nour', 'Vanshika', 'Ali'],
+        datasets: [{
+            label: '',
+            data: [40, 70, 50, 72],
+            backgroundColor: [
+                '#8a2121',
+                '#8E23E0',
+                '#0667D6',
+                '#17A88B',
+                '#E5343D',
+                ''
+            ],
+//            borderColor: [
+//                'rgba(255, 99, 132, 1)',
+//                'rgba(54, 162, 235, 1)',
+//                'rgba(255, 206, 86, 1)',
+//                'rgba(75, 192, 192, 1)',
+//                'rgba(153, 102, 255, 1)',
+//                'rgba(255, 159, 64, 1)'
+//            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        legend:{display: false}
+        ,
+        scales: {
+            labelString: '',
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }
+});
+//var myChart = new Chart(ctx, {
+//    type: 'bar',
+//,
+//    options: {
+//        scales: {
+//            yAxes: [{
+//                ticks: {
+//                    beginAtZero: true
+//                }
+//            }]
+//        }
+//    }
+//});
+</script>
+<!--
+     <script type="text/javascript" src="../plugins/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.stack.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.time.js"></script>
+    <script type="text/javascript" src="../plugins/flot/jquery.flot.symbol.js"></script>
+    <script type="text/javascript" src="../plugins/flot.tooltip/js/jquery.flot.js"></script>
+    <script type="text/javascript" src="../plugins/flot.curvedlines/curvedLines.js"></script>
+    <script type="text/javascript" src="../plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+-->
+        
   </body>
 </html>
