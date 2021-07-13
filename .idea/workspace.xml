@@ -3,7 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/fourth-layout/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/fourth-layout/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/fourth-layout/extra-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/fourth-layout/extra-demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index-v2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index-v2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/page-content/skins/blue-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/build/js/fourth-layout/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/fourth-layout/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/skins/blue-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/skins/green-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/skins/green-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/skins/purple-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/skins/purple-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/head.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/extra-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/extra-demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index-v2.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index-v2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/page-content/skins/blue-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/dashboard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/blue-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/green-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/green-dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/purple-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/purple-dashboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +102,7 @@
       <workItem from="1603281203261" duration="11919000" />
       <workItem from="1603311183434" duration="2073000" />
       <workItem from="1626031609431" duration="1587000" />
-      <workItem from="1626112254141" duration="3288000" />
+      <workItem from="1626112254141" duration="8067000" />
     </task>
     <servers />
   </component>

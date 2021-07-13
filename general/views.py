@@ -5,7 +5,7 @@ import datetime
 
 # Create your views here.
 def home(request):
-    return render(request, 'blue-dashboard.html')
+    return render(request, 'index.html')
 
 # def calender(request):
 #     return render(request, 'calendar.html')

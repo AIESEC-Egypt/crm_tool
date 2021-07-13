@@ -2,15 +2,15 @@ $(document).ready(function() {
 
     // Toastr
     // --------------------------------------------------
-
-    toastr.options = {
-        closeButton: true,
-        progressBar: true,
-        showMethod: 'fadeIn',
-        hideMethod: 'fadeOut',
-        timeOut: 5000
-    };
-    toastr.info('You have 6 notifications', 'Welcome to Umega');
+    //
+    // toastr.options = {
+    //     closeButton: true,
+    //     progressBar: true,
+    //     showMethod: 'fadeIn',
+    //     hideMethod: 'fadeOut',
+    //     timeOut: 5000
+    // };
+    // toastr.info('');
 
     // jQuery Counter Up
     // --------------------------------------------------
