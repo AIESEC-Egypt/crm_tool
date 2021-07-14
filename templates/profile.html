@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      {% include "head.html" %}
-      {% include "scripts.html" %}
+
 
 {#    <meta charset="utf-8">#}
 {#    <meta http-equiv="X-UA-Compatible" content="IE=edge">#}
@@ -10,10 +9,13 @@
     <title>ATOM - Profile</title>
     <!-- PACE-->
 
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Umega App - Profile</title>
+    <!-- PACE-->
     <link rel="stylesheet" type="text/css" href="static/plugins/PACE/themes/blue/pace-theme-flash.css">
     <script type="text/javascript" src="static/plugins/PACE/pace.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/dist/css/bootstrap.min.css">
     <!-- Fonts-->
@@ -28,37 +30,29 @@
     <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
     <!-- Primary Style-->
     <link rel="stylesheet" type="text/css" href="static/build/css/fourth-layout.css">
-          <!-- DataTables-->
-    <link rel="stylesheet" type="text/css" href="static/plugins/datatables.net-bs/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="static/plugins/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="static/plugins/datatables.net-colreorder-bs/css/colReorder.bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="static/plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css">
-    <!-- Bootstrap Date Range Picker-->
-    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap-daterangepicker/daterangepicker.css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
     <!--[if lt IE 9]>
     <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->script
+    <![endif]-->
   </head>
   <body>
     <!-- Header start-->
     <header>
       <div class="search-bar closed">
-        <form>
-          <div class="input-group input-group-lg">
-            <input type="text" placeholder="Search forstatic." class="form-control"><span class="input-group-btn">
-              <button type="button" class="btn btn-default search-bar-toggle"><i class="ti-close"></i></button></span>
-          </div>
-        </form>
+{#        <form>#}
+{#          <div class="input-group input-group-lg">#}
+{#            <input type="text" placeholder="Search forstatic." class="form-control"><span class="input-group-btn">#}
+{#              <button type="button" class="btn btn-default search-bar-toggle"><i class="ti-close"></i></button></span>#}
+{#          </div>#}
+{#        </form>#}
       </div><a href="index.html" class="brand pull-left"><img src="" alt="" width="100" class=""><img src="static/build/images/logo/logo-sm-light.png" alt="" width="28" class="logo-sm"></a><a href="javascript:;" role="button" class="hamburger-menu pull-left"><span></span></a>
-      <form class="mt-15 mb-15 pull-left hidden-xs">
-        <div class="form-group has-feedback mb-0">
-          <input type="text" aria-describedby="inputSearchFor" placeholder="Search forstatic." style="width: 200px" class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>
-        </div>
-      </form>
+{#      <form class="mt-15 mb-15 pull-left hidden-xs">#}
+{#        <div class="form-group has-feedback mb-0">#}
+{#          <input type="text" aria-describedby="inputSearchFor" placeholder="Sech forstatic." styrle="width: 200px" class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputSearchFor" class="sr-only">(default)</span>#}
+{#        </div>#}
+{#      </form>#}
       <ul class="notification-bar list-inline pull-right">
         <li class="visible-xs"><a href="javascript:;" role="button" class="header-icon search-bar-toggle"><i class="ti-search"></i></a></li>
         <li class="dropdown"><a id="dropdownMenu1" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble header-icon"><i class="ti-world"></i><span class="badge bg-danger">6</span></a>
@@ -134,10 +128,10 @@
             <li><a href="profile.html"><i class="ti-user mr-5"></i> My Profile</a></li>
             <li><a href="profile.html"><i class="ti-settings mr-5"></i> Account Settings</a></li>
             <li><a href="login-v2.html"><i class="ti-power-off mr-5"></i> Logout</a></li>
-          </ul>
-        </li>
-        <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble header-icon"><i class="ti-layout-sidebar-right"></i><span class="dot bg-danger"></span></a></li>
-      </ul>
+{#          </ul>#}
+{#        </li>#}
+{#        <li><a href="javascript:;" role="button" class="right-sidebar-toggle bubble header-icon"><i class="ti-layout-sidebar-right"></i><span class="dot bg-danger"></span></a></li>#}
+{#      </ul>#}
     </header>
     <!-- Header end-->
     <div class="main-container">
@@ -774,6 +768,31 @@
                 </div>
               </div>
 -->
+                          <div class="widget noborder">
+
+                <div class="text-center p-20 bd-l bd-r">
+                  <h4 class="text-success ">TASKS</h4>
+
+                </div>
+                <div class="row row-0 p-15 text-center bg-black">
+                  <div class="col-xs-3">
+                    <div class="fs-20 fw-500">30</div>
+                    <div class="text">Assigned</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="fs-20 fw-500">10</div>
+                    <div class="text-muted">Submitted</div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="fs-20 fw-500">5</div>
+                    <div class="text-muted">Submitted Late</div>
+                  </div>
+                    <div class="col-xs-3">
+                    <div class="fs-20 fw-500">15</div>
+                    <div class="text-muted">In Progress</div>
+                  </div>
+                </div>
+              </div>
                             <div class="widget noborder">
              
                 <div class="text-center p-20 bd-l bd-r">
@@ -852,7 +871,7 @@
                 </div>
                 <div class="widget-body">
                     <canvas id="prod"></canvas>
-                  <div id="prdod" class="mb-10"></div>
+                  <div id="prod" class="mb-10"></div>
                 
                 </div>
               </div>
@@ -1732,7 +1751,7 @@
               </div>
                       
         </div>
-        <div class="footer">2020 &copy;  <a href="http://themeforest.net/item/umega-responsive-web-app-kit/15482080">CRM Tool</a> Developed by <a href="https://tanta.edu.eg/" target="_blank">Tanta Univeristy Team</a></div>
+        <div class="footer">2021 &copy;  <a href="#">ATOM</a> Developed by <a href="https://tanta.edu.eg/" target="_blank">Tanta Univeristy Team</a></div>
       </div>
       <!-- Right Sidebar start-->
       <aside class="right-sidebar closed">
@@ -2014,7 +2033,35 @@
       <!-- Right Sidebar end-->
     </div>
     <!-- jQuery-->
-    <script type="text/javascript" src="static/plugins/jquery/dist/jquery.min.js"></script>
+{#    <script type="text/javascript" src="static/plugins/jquery/dist/jquery.min.js"></script>#}
+{#    <!-- Bootstrap JavaScript-->#}
+{#    <script type="text/javascript" src="static/plugins/bootstrap/dist/js/bootstrap.min.js"></script>#}
+{#    <!-- Malihu Scrollbar-->#}
+{#    <script type="text/javascript" src="static/plugins/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>#}
+{#    <!-- Animo.js-->#}
+{#    <script type="text/javascript" src="static/plugins/animo.js/animo.min.js"></script>#}
+{#    <!-- Bootstrap Progressbar-->#}
+{#    <script type="text/javascript" src="static/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>#}
+{#    <!-- jQuery Easy Pie Chart-->#}
+{#    <script type="text/javascript" src="static/plugins/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>#}
+{#    <!-- Google maps-->#}
+{#    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=weather"></script>#}
+{#    <!-- Custom JS-->#}
+{#    <script type="text/javascript" src="static/build/js/fourth-layout/app.js"></script>#}
+{#    <script type="text/javascript" src="static/build/js/fourth-layout/demo.js"></script>#}
+{#    <script type="text/javascript" src="static/build/js/page-content/user-pages/profile.js"></script>#}
+{#       <!-- Flot Charts-->#}
+{#  <script type="text/javascript" src="static/plugins/flot/jquery.flot.js"></script>#}
+{#    <script type="text/javascript" src="static/plugins/flot/jquery.flot.resize.js"></script>#}
+{#    <script type="text/javascript" src="static/plugins/flot/jquery.flot.stack.js"></script>#}
+{#    <script type="text/javascript" src="static/plugins/flot/jquery.flot.pie.js"></script>#}
+{#    <script type="text/javascript" src="static/plugins/flot/jquery.flot.time.js"></script>#}
+{#    <script type="text/javascript" src="static/plugins/flot/jquery.flot.symbol.js"></script>#}
+{#    <script type="text/javascript" src="static/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>#}
+      
+<!--      <canvas id="pro" width="400" height="400"></canvas>-->
+
+      <script type="text/javascript" src="static/plugins/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap JavaScript-->
     <script type="text/javascript" src="static/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Malihu Scrollbar-->
@@ -2031,48 +2078,15 @@
     <script type="text/javascript" src="static/build/js/fourth-layout/app.js"></script>
     <script type="text/javascript" src="static/build/js/fourth-layout/demo.js"></script>
     <script type="text/javascript" src="static/build/js/page-content/user-pages/profile.js"></script>
-       <!-- Flot Charts-->
-  <script type="text/javascript" src="static/plugins/flot/jquery.flot.js"></script>
-    <script type="text/javascript" src="static/plugins/flot/jquery.flot.resize.js"></script>
-    <script type="text/javascript" src="static/plugins/flot/jquery.flot.stack.js"></script>
-    <script type="text/javascript" src="static/plugins/flot/jquery.flot.pie.js"></script>
-    <script type="text/javascript" src="static/plugins/flot/jquery.flot.time.js"></script>
-    <script type="text/javascript" src="static/plugins/flot/jquery.flot.symbol.js"></script>
-    <script type="text/javascript" src="static/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
-      
-<!--      <canvas id="pro" width="400" height="400"></canvas>-->
 <script>
-  
+    $(document).ready(function () { function e() { { $("#esp-re").easyPieChart({ barColor: "#8a2121", trackColor: "#E6E6E6", scaleColor: !1, scaleLength: 0, lineCap: "round", lineWidth: 10, size: 140, animate: { duration: 2e3, enabled: !0 } }), $("#esp-comment").easyPieChart({ barColor: "#8E23E0", trackColor: "#E6E6E6", scaleColor: !1, scaleLength: 0, lineCap: "round", lineWidth: 10, size: 140, animate: { duration: 2e3, enabled: !0 } }), $("#esp-photo").easyPieChart({ barColor: "#0667D6", trackColor: "#E6E6E6", scaleColor: !1, scaleLength: 0, lineCap: "round", lineWidth: 10, size: 140, animate: { duration: 2e3, enabled: !0 } }), $("#esp-user").easyPieChart({ barColor: "#17A88B", trackColor: "#E6E6E6", scaleColor: !1, scaleLength: 0, lineCap: "round", lineWidth: 10, size: 140, animate: { duration: 2e3, enabled: !0 } }), $("#esp-feedback").easyPieChart({ barColor: "#E5343D", trackColor: "#E6E6E6", scaleColor: !1, scaleLength: 0, lineCap: "round", lineWidth: 10, size: 140, animate: { duration: 2e3, enabled: !0 } }) } var e = { center: new google.maps.LatLng(34.052234, -118.243685), zoom: 10, mapTypeId: google.maps.MapTypeId.ROADMAP, styles: [{ featureType: "water", elementType: "geometry", stylers: [{ color: "#004358" }] }, { featureType: "landscape", elementType: "geometry", stylers: [{ color: "#1f8a70" }] }, { featureType: "poi", elementType: "geometry", stylers: [{ color: "#1f8a70" }] }, { featureType: "road.highway", elementType: "geometry", stylers: [{ color: "#fd7400" }] }, { featureType: "road.arterial", elementType: "geometry", stylers: [{ color: "#1f8a70" }, { lightness: -20 }] }, { featureType: "road.local", elementType: "geometry", stylers: [{ color: "#1f8a70" }, { lightness: -17 }] }, { elementType: "labels.text.stroke", stylers: [{ color: "#ffffff" }, { visibility: "on" }, { weight: .9 }] }, { elementType: "labels.text.fill", stylers: [{ visibility: "on" }, { color: "#ffffff" }] }, { featureType: "poi", elementType: "labels", stylers: [{ visibility: "simplified" }] }, { elementType: "labels.icon", stylers: [{ visibility: "off" }] }, { featureType: "transit", elementType: "geometry", stylers: [{ color: "#1f8a70" }, { lightness: -10 }] }, {}, { featureType: "administrative", elementType: "geometry", stylers: [{ color: "#1f8a70" }, { weight: .7 }] }] }; new google.maps.Map(document.getElementById("simpleMap"), e) } google.maps.event.addDomListener(window, "load", e) });
 
-//	$('#date-addedd, #date-modified').daterangepicker({
-//		singleDatePicker: true,
-//	});
-//
-//	// Order List
-//	// --------------------------------------------------
-//
-//	var table = document.getElementById('order-list').DataTable({
-//		pageLength: 10,
-//		colReorder: true,
-//		buttons: ['copy', 'excel', 'pdf', 'print'],
-//		searching: false,
-//		aLengthMenu: [
-//			[10, 20, 50, -1],
-//			[10, 20, 50, 'All']
-//		],
-//		order: [
-//			[1, 'asc']
-//		],
-//		columnDefs: [{
-//			orderable: false,
-//			targets: [0, 7]
-//		}]
-//
-//	$('#order-list_wrapper .col-sm-6:eq(1)').addClass('text-right');
-//	table.buttons().container().appendTo('#order-list_wrapper .col-sm-6:eq(1)');
-//
-//});
-    
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script type="text/javascript" src="jscript/graph.js"></script>
+    <script>
+
+
 var ctx = document.getElementById('prod').getContext('2d');
     var stackedBar = new Chart(ctx, {
     type: 'horizontalBar',
@@ -2089,14 +2103,7 @@ var ctx = document.getElementById('prod').getContext('2d');
                 '#E5343D',
                 ''
             ],
-//            borderColor: [
-//                'rgba(255, 99, 132, 1)',
-//                'rgba(54, 162, 235, 1)',
-//                'rgba(255, 206, 86, 1)',
-//                'rgba(75, 192, 192, 1)',
-//                'rgba(153, 102, 255, 1)',
-//                'rgba(255, 159, 64, 1)'
-//            ],
+
             borderWidth: 1
         }]
     },
@@ -2114,7 +2121,7 @@ var ctx = document.getElementById('prod').getContext('2d');
         }
     }
 });
-       
+
     var ctb = document.getElementById('nps').getContext('2d');
     var stackedBar = new Chart(ctb, {
     type: 'horizontalBar',
@@ -2131,15 +2138,7 @@ var ctx = document.getElementById('prod').getContext('2d');
                 '#E5343D',
                 ''
             ],
-//            borderColor: [
-//                'rgba(255, 99, 132, 1)',
-//                'rgba(54, 162, 235, 1)',
-//                'rgba(255, 206, 86, 1)',
-//                'rgba(75, 192, 192, 1)',
-//                'rgba(153, 102, 255, 1)',
-//                'rgba(255, 159, 64, 1)'
-//            ],
-            borderWidth: 1
+Width: 1
         }]
     },
     options: {
@@ -2156,21 +2155,9 @@ var ctx = document.getElementById('prod').getContext('2d');
         }
     }
 });
-//var myChart = new Chart(ctx, {
-//    type: 'bar',
-//,
-//    options: {
-//        scales: {
-//            yAxes: [{
-//                ticks: {
-//                    beginAtZero: true
-//                }
-//            }]
-//        }
-//    }
-//});
+
 </script>
-<!--
+    <!--
      <script type="text/javascript" src="static/plugins/flot/jquery.flot.js"></script>
     <script type="text/javascript" src="static/plugins/flot/jquery.flot.resize.js"></script>
     <script type="text/javascript" src="static/plugins/flot/jquery.flot.stack.js"></script>
