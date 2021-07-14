@@ -81,7 +81,7 @@ class Application(models.Model):
                            , null=True, blank=True)
     application_manager = models.ForeignKey('general.Member', related_name='application_manager',
                                             on_delete=models.CASCADE, null=True, blank=True)
-    is_ir = models.BooleanField(null=True, default = False)
+    is_ir = models.BooleanField(null=False)
     status = models.ForeignKey(Status, on_delete=models.CASCADE, related_name='application_status',
                                null=True, blank=True)
     process_time_SU_APL = models.IntegerField(null=True, blank=True, default=0)

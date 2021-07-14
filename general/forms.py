@@ -1,6 +1,8 @@
 from django import forms
-from models import Customers
-class CustomersForms(forms.ModelForm):
+from .models import Customers
+
+
+class CustomersForms(forms.Form):
     class Meta:
         model = Customers
         fields = [
@@ -11,4 +13,3 @@ class CustomersForms(forms.ModelForm):
             'timestamp',
             'registration'
         ]
-

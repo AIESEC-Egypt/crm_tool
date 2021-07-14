@@ -1,7 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from forms import CustomersForms
+from .forms import CustomersForms
+from django.shortcuts import render
 import datetime
+from django.contrib.auth.models import User
+from django.contrib.auth import(
+	authenticate,
+	get_user_model,
+	login,
+	logout,
+	)
 
 
 # Create your views here.
@@ -26,4 +34,4 @@ def customers_create_view(request):
     context = {
         'form':form
     }
-    return render(request,"customers/customers_create.html",context)
+    return render(request, "customers/customers_create.html", context)

@@ -1,8 +1,6 @@
 from django.contrib import admin
 from general.models import *
-
 # Register your models here.
-
 admin.site.register(Entity)
 admin.site.register(Member)
 admin.site.register(Role)

@@ -145,7 +145,8 @@ class TouchPoints(models.Model):
                                  related_name = 'meeting_audience')
 class Customers(models.Model):
     Customer_Name = models.CharField(max_length=120)
-    contact = models.IntegerField()
+    contact = models.IntegerField(default=False)
+    email = models.EmailField()
     person_in_charge = models.CharField(max_length=100)
     description = models.CharField(max_length=200)
     registration = models.DateField(auto_now_add=False, auto_now=False, blank=True)
