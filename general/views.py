@@ -18,3 +18,6 @@ def ec(request):
 
 def customer(request):
     return render(request,'customer-list.html')
+
+def login(request):
+    return render(request,'login.html')
