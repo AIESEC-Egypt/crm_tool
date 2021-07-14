@@ -1,0 +1,56 @@
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ATOM Login</title>
+    <!-- PACE-->
+    <link rel="stylesheet" type="text/css" href="static/plugins/PACE/themes/blue/pace-theme-flash.css">
+    <script type="text/javascript" src="static/plugins/PACE/pace.min.js"></script>
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Fonts-->
+    <link rel="stylesheet" type="text/css" href="static/plugins/themify-icons/themify-icons.css">
+    <!-- Primary Style-->
+    <link rel="stylesheet" type="text/css" href="static/build/css/first-layout.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="background-image: url(static/build/images/backgrounds/14.jpg)" class="body-bg-full v2">
+    <div class="container page-container">
+      <div class="page-content">
+        <div class="v2">
+          <div class="logo"><img src="static/build/images/logo/Logo-on-sleeve.png" alt="" width="180"></div>
+          <form method="POST" action="">{% csrf_token %}
+                {{ form|crispy }}
+            <button type="submit" class="btn-lg btn btn-primary btn-rounded btn-block">Sign in</button>
+          </form>
+          <hr>
+
+
+
+            <div class="logo"><img src="static/build/images/logo/tagline.png" alt="" width="140"></div>
+
+            <h6>Developed by Omar Kanoma</h6>
+
+            <hr>
+            <p></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery-->
+    <script type="text/javascript" src="static/plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript-->
+    <script type="text/javascript" src="static/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS-->
+    <script type="text/javascript" src="static/build/js/first-layout/extra-demo.js"></script>
+  </body>
+</html>
