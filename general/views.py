@@ -39,6 +39,7 @@ def customers_create_view(request):
         'form':form
     }
     return render(request, "customers/customers_create.html", context)
+
 def user_login_view(request):
     if request.user.is_authenticated:
         return redirect("index.html")

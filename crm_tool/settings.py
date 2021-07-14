@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'tm',
     'sign_ups',
     'opportunities',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,7 @@ STATIC_ROOT = BASE_DIR / "static"
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # MEDIA_ROOT
 MEDIA_URL = '/media/'
