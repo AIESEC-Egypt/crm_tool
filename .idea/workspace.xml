@@ -5,49 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/general/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/customers/customers_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/crm_tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crm_tool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm_tool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm_tool/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crm_tool/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm_tool/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/fourth-layout/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/fourth-layout/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/fourth-layout/extra-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/fourth-layout/extra-demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index-v2.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index-v2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/page-content/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/page-content/skins/blue-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/page-content/user-pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/js/page-content/user-pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/images/users/04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/images/users/04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/images/users/06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/images/users/06.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/images/users/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/images/users/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/images/users/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/images/users/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/images/users/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/images/users/20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/js/fourth-layout/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/fourth-layout/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/charts/flot-charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/charts/flot-charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/skins/blue-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/skins/green-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/skins/green-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/skins/purple-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/skins/purple-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/build/js/page-content/user-pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/build/js/page-content/user-pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customer-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customer-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ecommerce-dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scripts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/extra-demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/fourth-layout/extra-demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index-v2.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index-v2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/page-content/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/page-content/skins/blue-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/assets/js/page-content/user-pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/assets/js/page-content/user-pages/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/images/users/04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/images/users/04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/images/users/06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/images/users/06.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/images/users/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/images/users/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/images/users/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/images/users/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/images/users/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/images/users/20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/charts/flot-charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/charts/flot-charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/dashboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/dashboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/blue-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/blue-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/green-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/green-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/purple-dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/skins/purple-dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/build/js/page-content/user-pages/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/build/js/page-content/user-pages/profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +21,14 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,6 +53,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />

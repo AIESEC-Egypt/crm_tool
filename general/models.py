@@ -143,7 +143,13 @@ class TouchPoints(models.Model):
     meeting_type = models.CharField(max_length = 2, choices = meeting_types, default = 'Other')
     audience = models.ForeignKey(Role, on_delete=models.CASCADE, null=True, blank=True,
                                  related_name = 'meeting_audience')
-
+class Customers(models.Model):
+    Customer_Name = models.CharField(max_length=120)
+    contact = models.IntegerField()
+    person_in_charge = models.CharField(max_length=100)
+    description = models.CharField(max_length=200)
+    registration = models.DateField(auto_now_add=False, auto_now=False, blank=True)
+    timestamp = models.DateField(auto_now_add=True, auto_now=False, blank=True)
 
 class OperationalGoal(models.Model):
     goal_type = (
