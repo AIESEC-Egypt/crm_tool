@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e43f80f6-71a4-4860-8074-6015db34bbff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/Production/login-v2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crm_tool/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm_tool/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crm_tool/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/crm_tool/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/general/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

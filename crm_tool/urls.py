@@ -26,7 +26,7 @@ urlpatterns = [
     path('index.html', home, name='home'),
     path('customer.html', customer, name='customer'),
     path('index.html', ec, name='ec'),
-    url(r'login.html$', user_login_view),
+    path('login.html', user_login_view, name="auth"),
     path('customers/customers_create.html', customers_create_view, name="customer")
     # path('calendar', calender, name='calendar')
 ]

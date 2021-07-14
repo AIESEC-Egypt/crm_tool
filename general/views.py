@@ -46,4 +46,4 @@ def user_login_view(request):
         user = authenticate(username=username, password=password)
         login(request, user)
         return redirect("/index.html")
-    return render(request, "login-v2.html", {"form": form})
+    return render(request, "login.html", {"form": form})
