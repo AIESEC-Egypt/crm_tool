@@ -27,6 +27,7 @@ def ec(request):
 
 def customer(request):
     return render(request,'customer-list.html')
+
 def customers_create_view(request):
     form = CustomersForms(request.POST or None)
     if form.is_valid():

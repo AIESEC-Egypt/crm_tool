@@ -23,7 +23,8 @@ urlpatterns = [
     path('', home, name='home'),
     path('profile.html', profile, name='profile'),
     path('index.html', home, name='home'),
-    path('customer-list.html', customer, name='customer'),
+    path('customer.html', customer, name='customer'),
     path('index.html', ec, name='ec'),
+    path('customers/customers_create.html', customers_create_view, name="customer")
     # path('calendar', calender, name='calendar')
 ]
