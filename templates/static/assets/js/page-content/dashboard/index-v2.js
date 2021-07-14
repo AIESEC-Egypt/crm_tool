@@ -203,7 +203,7 @@ $(document).ready(function() {
 	Morris.Donut({
 		element: 'morris-category',
 		data: [{
-			label: 'Test',
+			label: 'Cosmetics',
 			value: 40
 		}, {
 			label: 'Accessories',

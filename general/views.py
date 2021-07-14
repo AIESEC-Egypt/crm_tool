@@ -12,3 +12,9 @@ def home(request):
 
 def profile(request):
     return render(request, 'profile.html')
+
+def ec(request):
+    return render(request,'ecommerce-dashboard.html')
+
+def customer(request):
+    return render(request,'customer-list.html')

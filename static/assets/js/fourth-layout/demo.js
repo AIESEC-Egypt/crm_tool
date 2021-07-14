@@ -33,16 +33,16 @@ $(document).ready(function() {
         var getColor = $('body').attr('data-sidebar-color');
         $('body').removeClass(getColor).addClass(setColor).attr('data-sidebar-color', setColor);
         if ($('body').hasClass('sidebar-dark')) {
-            $('.main-sidebar').css('background-image', 'url(\'static/build/images/backgrounds/10.jpg\')');
+            $('.main-sidebar').css('background-image', 'url(\'../build/images/backgrounds/10.jpg\')');
         } else if ($('body').hasClass('sidebar-light')) {
-            $('.main-sidebar').css('background-image', 'url(\'static/build/images/backgrounds/11.jpg\')');
+            $('.main-sidebar').css('background-image', 'url(\'../build/images/backgrounds/11.jpg\')');
         }
     });
 
     $('.sidebar-bg').on('click', function() {
         $('body').removeClass('sidebar-no-bg');
         $('#sidebar-bg').prop('checked', true);
-        var setBg = 'static/build/images/backgrounds/' + $(this).attr('data-bg');
+        var setBg = '../build/images/backgrounds/' + $(this).attr('data-bg');
         $('.main-sidebar').css('background-image', 'url(' + setBg + ')');
     });
 
@@ -50,9 +50,9 @@ $(document).ready(function() {
         if ($(this).prop('checked') === true) {
             $('body').removeClass('sidebar-no-bg');
             if ($('body').hasClass('sidebar-dark')) {
-                $('.main-sidebar').css('background-image', 'url(\'static/build/images/backgrounds/10.jpg\')');
+                $('.main-sidebar').css('background-image', 'url(\'../build/images/backgrounds/10.jpg\')');
             } else if ($('body').hasClass('sidebar-light')) {
-                $('.main-sidebar').css('background-image', 'url(\'static/build/images/backgrounds/11.jpg\')');
+                $('.main-sidebar').css('background-image', 'url(\'../build/images/backgrounds/11.jpg\')');
             }
         } else if ($(this).prop('checked') === false) {
             $('body').addClass('sidebar-no-bg')

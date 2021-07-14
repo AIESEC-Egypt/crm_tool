@@ -13,7 +13,7 @@ $(document).ready(function() {
 	// --------------------------------------------------
 
 	$('.body-bg').on('click', function() {
-		var setBg = 'static/build/images/backgrounds/' + $(this).attr('data-bg');
+		var setBg = '../build/images/backgrounds/' + $(this).attr('data-bg');
 		$('body').css('background-image', 'url(' + setBg + ')');
 	});
 

@@ -10,7 +10,7 @@ $(document).ready(function() {
         hideMethod: 'fadeOut',
         timeOut: 5000
     };
-    toastr.info('');
+    toastr.info('You have 6 notifications', 'Welcome to Umega');
 
     // jQuery Counter Up
     // --------------------------------------------------
