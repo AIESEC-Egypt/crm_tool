@@ -26,7 +26,7 @@ urlpatterns = [
     path('index.html', home, name='home'),
     path('customer-list.html', customer, name='customer'),
     path('index.html', ec, name='ec'),
-    path(r'login.htmorl', user_login_view),
+    path(r'login.html', user_login_view),
     path(r'logout.html', logoutt),
     path('edit-customer.html', edit_customer),
     path('edit-order.html', edit_order),
