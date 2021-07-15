@@ -25,24 +25,31 @@ def home(request):
 #     return render(request, 'calendar.html')
 
 def profile(request):
-    return render(request, 'profile.html')
-
+    if request.user.is_authenticated:
+        return render(request, 'profile.html')
+    else:
+        return redirect("/login.html")
 def ec(request):
-    return render(request,'ecommerce-dashboard.html')
-
+    if request.user.is_authenticated:
+        return render(request,'ecommerce-dashboard.html')
+    else:
+        return redirect("/login.html")
 def customer(request):
-    return render(request,'customer-list.html')
-
-
+    if request.user.is_authenticated:
+        return render(request,'customer-list.html')
+    else:
+        return redirect("/login.html")
 def customers_create_view(request):
-    form = CustomersForms(request.POST or None)
-    if form.is_valid():
-        form.save()
-    context = {
-        'form':form
-    }
-    return render(request, "customers/customers_create.html", context)
-
+    if request.user.is_authenticated:
+        form = CustomersForms(request.POST or None)
+        if form.is_valid():
+            form.save()
+        context = {
+            'form':form
+        }
+        return render(request, "customers/customers_create.html", context)
+    else:
+        return redirect("/login.html")
 def user_login_view(request):
     if request.user.is_authenticated:
         return redirect("index.html")
@@ -57,23 +64,35 @@ def user_login_view(request):
 
 
 def edit_customer(request):
-    return render(request, "edit-customer.html")
-
+    if request.user.is_authenticated:
+        return render(request, "edit-customer.html")
+    else:
+        return redirect("/login.html")
 def edit_order(request):
-    return render(request, "edit-order.html")
-
+    if request.user.is_authenticated:
+        return render(request, "edit-order.html")
+    else:
+        return redirect("/login.html")
 def edit_product(request):
-    return render(request, "edit-product.html")
-
+    if request.user.is_authenticated:
+        return render(request, "edit-product.html")
+    else:
+        return redirect("/login.html")
 def invoice(request):
-    return render(request, "invoice.html")
-
+    if request.user.is_authenticated:
+        return render(request, "invoice.html")
+    else:
+        return redirect("/login.html")
 def order_list(request):
-    return render(request, "order-list.html")
-
+    if request.user.is_authenticated:
+        return render(request, "order-list.html")
+    else:
+        return redirect("/login.html")
 def product_list(request):
-    return render(request, "product-list.html")
-
+    if request.user.is_authenticated:
+        return render(request, "product-list.html")
+    else:
+        return redirect("/login.html")
 def logoutt(request):
     logout(request)
     return redirect("index.html");
