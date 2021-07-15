@@ -55,6 +55,25 @@ def user_login_view(request):
         return redirect("/index.html")
     return render(request, "login.html", {"form": form})
 
+
+def edit_customer(request):
+    return render(request, "edit-customer.html")
+
+def edit_order(request):
+    return render(request, "edit-order.html")
+
+def edit_product(request):
+    return render(request, "edit-product.html")
+
+def invoice(request):
+    return render(request, "invoice.html")
+
+def order_list(request):
+    return render(request, "order-list.html")
+
+def product_list(request):
+    return render(request, "product-list.html")
+
 def logoutt(request):
     logout(request)
     return redirect("index.html");

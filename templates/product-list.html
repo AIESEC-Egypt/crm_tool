@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ATOM - Customer List</title>
+    <title>ATOM - Product List</title>
           <link rel="shortcut icon" href="static/build/images/logo/logo-sm-light.png"/>
 
     <!-- PACE-->
@@ -27,8 +27,6 @@
     <link rel="stylesheet" type="text/css" href="static/plugins/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static/plugins/datatables.net-colreorder-bs/css/colReorder.bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="static/plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css">
-    <!-- Bootstrap Date Range Picker-->
-    <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap-daterangepicker/daterangepicker.css">
     <!-- Primary Style-->
     <link rel="stylesheet" type="text/css" href="static/build/css/fourth-layout.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
@@ -44,7 +42,7 @@
       <div class="search-bar closed">
         <form>
           <div class="input-group input-group-lg">
-{#            <input type="text" placeholder="Search forstatic." class="form-control"><span class="input-group-btn">#}
+            <input type="text" placeholder="Search forstatic." class="form-control"><span class="input-group-btn">
               <button type="button" class="btn btn-default search-bar-toggle"><i class="ti-close"></i></button></span>
           </div>
         </form>
@@ -55,7 +53,7 @@
         </div>
       </form>
       <ul class="notification-bar list-inline pull-right">
-{#        <li class="visible-xs"><a href="javascript:;" role="button" class="header-icon search-bar-toggle"><i class="ti-search"></i></a></li>#}
+        <li class="visible-xs"><a href="javascript:;" role="button" class="header-icon search-bar-toggle"><i class="ti-search"></i></a></li>
 {#        <li class="dropdown"><a id="dropdownMenu1" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle bubble header-icon"><i class="ti-world"></i><span class="badge bg-danger">6</span></a>#}
           <div aria-labelledby="dropdownMenu1" class="dropdown-menu dropdown-menu-right dm-medium fs-12 animated fadeInDown">
             <h5 class="dropdown-header">You have 6 notifications</h5>
@@ -122,7 +120,7 @@
             <div class="media mt-0">
               <div class="media-left avatar"><img src="static/build/images/users/04.jpg" alt="" class="media-object img-circle"><span class="status bg-success"></span></div>
               <div class="media-right media-middle pl-0">
-                <p class="fs-12 text-base mb-0">Hi, {{ user.first_name }}</p>
+                <p class="fs-12 text-base mb-0">Hi, {{ user.first_name }} </p>
               </div>
             </div></a>
           <ul aria-labelledby="dropdownMenu2" class="dropdown-menu fs-12 animated fadeInDown">
@@ -143,7 +141,7 @@
           <h4 class="fs-16 text-white mt-15 mb-5 fw-300">{{ user.first_name }} {{ user.last_name }}</h4>
 {#          <p class="mb-0 text-muted">Designer</p>#}
         </div>
-              <ul class="list-unstyled navigation mb-0">
+               <ul class="list-unstyled navigation mb-0">
           <li class="sidebar-category">Main</li>
 {#          <li class="panel"><a role="button" data-toggle="collapse" data-parent=".navigation" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="bubble collapsed"><i class="ti-panel"></i><span class="sidebar-title">Dashboard</span><span class="bdge bg-danger"></span></a>#}
 {#            <ul id="collapse1" class="list-unstyled collapse">#}
@@ -174,69 +172,35 @@
         <div class="page-header container-fluid">
           <div class="row">
             <div class="col-sm-6">
-              <h4 class="mt-0 mb-5">Customer List</h4>
+              <h4 class="mt-0 mb-5">Product List</h4>
               <ol class="breadcrumb mb-0">
                 <li><a href="#">ATOM</a></li>
-                <li><a href="#">Customers List</a></li>
-
+{#                <li><a href="#">E-commerce</a></li>#}
+                <li class="active">Product List</li>
               </ol>
             </div>
             <div class="col-sm-6">
-{#              <div class="btn-group mt-5">#}
-{#                <button type="button" class="btn btn-default btn-outline"><i class="flag-icon flag-icon-us mr-5"></i> English</button>#}
-{#                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-outline dropdown-toggle"><span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>#}
-{#                <ul class="dropdown-menu dropdown-menu-right animated fadeInDown">#}
-{#                  <li><a href="#"><i class="flag-icon flag-icon-de mr-5"></i> German</a></li>#}
-{#                  <li><a href="#"><i class="flag-icon flag-icon-fr mr-5"></i> French</a></li>#}
-{#                  <li><a href="#"><i class="flag-icon flag-icon-es mr-5"></i> Spanish</a></li>#}
-{#                  <li><a href="#"><i class="flag-icon flag-icon-it mr-5"></i> Italian</a></li>#}
-{#                  <li><a href="#"><i class="flag-icon flag-icon-jp mr-5"></i> Japanese</a></li>#}
-{#                </ul>#}
-{#              </div>#}
             </div>
           </div>
         </div>
         <div class="page-content container-fluid">
           <div class="widget">
             <div class="widget-heading">
-              <h3 class="widget-title">Customer List</h3>
+              <h3 class="widget-title">Product List</h3>
             </div>
             <div class="widget-body">
               <form>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="txtCustomerName">Customer Name</label>
-                      <input id="txtCustomerName" type="text" class="form-control">
+                      <label for="txtProductName">Product Name</label>
+                      <input id="txtProductName" type="text" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="ddlCustomerGroup">Customer Group</label>
-                      <select id="ddlCustomerGroup" class="form-control">
-                        <option value="">Choose</option>
-                        <option value="1">Group 1</option>
-                        <option value="2">Group 2</option>
-                        <option value="3">Group 3</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="ddlApproved">Approved</label>
-                      <select id="ddlApproved" class="form-control">
-                        <option value="">Choose</option>
-                        <option value="1">Yes</option>
-                        <option value="0">No</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label for="txtEmail">Email</label>
-                      <input id="txtEmail" type="text" class="form-control">
+                      <label for="txtPrice">Price</label>
+                      <input id="txtPrice" type="text" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -249,18 +213,24 @@
                       </select>
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label for="date-added">Date Added</label>
-                      <div class="input-group">
-                        <input id="date-added" type="text" class="form-control"><span class="input-group-addon"><span class="ti-calendar"></span></span>
-                      </div>
+                      <label for="txtModel">Model</label>
+                      <input id="txtModel" type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="txtPrice">Quantity</label>
+                      <input id="txtQuantity" type="text" class="form-control">
                     </div>
                   </div>
                 </div>
                 <button type="submit" class="mb-15 btn btn-raised btn-success">Filter</button>
               </form>
-              <table id="customer-list" style="width: 100%" class="table table-hover dt-responsive nowrap">
+              <table id="product-list" style="width: 100%" class="table table-hover dt-responsive nowrap">
                 <thead>
                   <tr>
                     <th class="text-center">
@@ -269,11 +239,12 @@
                         <label for="checkAll" class="pl-0">&nbsp;</label>
                       </div>
                     </th>
-                    <th>Customer Name</th>
-                    <th>Email</th>
-                    <th>Customer Group</th>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Model</th>
+                    <th class="text-right">Price</th>
+                    <th class="text-right">Quantity</th>
                     <th>Status</th>
-                    <th>Date Added</th>
                     <th class="text-center">Action</th>
                   </tr>
                 </thead>
@@ -285,11 +256,12 @@
                         <label for="product-01" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Larry Elliott</td>
-                    <td>larry.elliott@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/01.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #01</td>
+                    <td>Model #20</td>
+                    <td class="text-right">$50.00</td>
+                    <td class="text-right">320</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/19/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -305,11 +277,12 @@
                         <label for="product-02" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Harry Gardner</td>
-                    <td>harry.gardner@hotmail.fr</td>
-                    <td>Default</td>
-                    <td><span class="label label-success">Enabled</span></td>
-                    <td>04/19/2016</td>
+                    <td class="text-center"><img src="static/build/images/products/02.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #02</td>
+                    <td>Model #12</td>
+                    <td class="text-right">$90.00</td>
+                    <td class="text-right">4</td>
+                    <td><span class="label label-warning">Low stock</span></td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -325,11 +298,12 @@
                         <label for="product-03" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Lori Cox</td>
-                    <td>lori.cox@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/03.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #03</td>
+                    <td>Model #20</td>
+                    <td class="text-right">$20.00</td>
+                    <td class="text-right">56</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/19/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -345,11 +319,12 @@
                         <label for="product-04" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>James Medina</td>
-                    <td>james.medina</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/04.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #04</td>
+                    <td>Model #14</td>
+                    <td class="text-right">$150.00</td>
+                    <td class="text-right">30</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/19/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -365,11 +340,12 @@
                         <label for="product-05" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Lauren Perry</td>
-                    <td>Lauren.Perry@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/05.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #05</td>
+                    <td>Model #64</td>
+                    <td class="text-right">$41.00</td>
+                    <td class="text-right">63</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/19/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -385,11 +361,12 @@
                         <label for="product-06" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Aaron Holmes</td>
-                    <td>aaron.holmes@hotmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/06.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #06</td>
+                    <td>Model #20</td>
+                    <td class="text-right">$65.00</td>
+                    <td class="text-right">62</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/19/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -405,11 +382,12 @@
                         <label for="product-07" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Eric Santos</td>
-                    <td>eric.santos@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/07.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #07</td>
+                    <td>Model #54</td>
+                    <td class="text-right">$24.00</td>
+                    <td class="text-right">75</td>
                     <td><span class="label label-danger">Disabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -425,11 +403,12 @@
                         <label for="product-08" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Benjamin Ray</td>
-                    <td>benjamin.ray@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/08.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #08</td>
+                    <td>Model #08</td>
+                    <td class="text-right">$50.00</td>
+                    <td class="text-right">31</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -445,11 +424,12 @@
                         <label for="product-09" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Virginia Baker</td>
-                    <td>virginia.baker@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/09.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #09</td>
+                    <td>Model #35</td>
+                    <td class="text-right">$450.00</td>
+                    <td class="text-right">80</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -465,11 +445,12 @@
                         <label for="product-10" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Adam Vargas</td>
-                    <td>adam.vargas@gmail.com</td>
-                    <td>Default</td>
-                    <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
+                    <td class="text-center"><img src="static/build/images/products/10.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #10</td>
+                    <td>Model #12</td>
+                    <td class="text-right">$460.00</td>
+                    <td class="text-right">5</td>
+                    <td><span class="label label-warning">Low stock</span></td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -485,11 +466,12 @@
                         <label for="product-11" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Dylan Chapman</td>
-                    <td>dylan.chapman@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/11.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #11</td>
+                    <td>Model #20</td>
+                    <td class="text-right">$240.00</td>
+                    <td class="text-right">320</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -505,11 +487,12 @@
                         <label for="product-12" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Mildred Henry</td>
-                    <td>mildred.henry@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/12.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #12</td>
+                    <td>Model #20</td>
+                    <td class="text-right">$50.00</td>
+                    <td class="text-right">320</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -525,11 +508,12 @@
                         <label for="product-13" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Brian Rogers</td>
-                    <td>brian.rogers@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/13.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #13</td>
+                    <td>Model #31</td>
+                    <td class="text-right">$100.00</td>
+                    <td class="text-right">24</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -545,11 +529,12 @@
                         <label for="product-14" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Jennifer Valdez</td>
-                    <td>jennifer.valdez@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/14.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #14</td>
+                    <td>Model #09</td>
+                    <td class="text-right">$140.00</td>
+                    <td class="text-right">200</td>
                     <td><span class="label label-danger">Disabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -565,11 +550,12 @@
                         <label for="product-15" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>James Perez</td>
-                    <td>james.perez@hotmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/15.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #15</td>
+                    <td>Model #78</td>
+                    <td class="text-right">$35.00</td>
+                    <td class="text-right">40</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -585,11 +571,12 @@
                         <label for="product-16" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Joshua Tran</td>
-                    <td>joshua.tran@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/16.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #16</td>
+                    <td>Model #24</td>
+                    <td class="text-right">$190.00</td>
+                    <td class="text-right">28</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -605,11 +592,12 @@
                         <label for="product-17" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Ryan Long</td>
-                    <td>ryan.long@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/17.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #17</td>
+                    <td>Model #56</td>
+                    <td class="text-right">$190.00</td>
+                    <td class="text-right">40</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -625,11 +613,12 @@
                         <label for="product-18" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Walter Scott</td>
-                    <td>walter.scott@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/18.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #18</td>
+                    <td>Model #35</td>
+                    <td class="text-right">$140.00</td>
+                    <td class="text-right">24</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -645,11 +634,12 @@
                         <label for="product-19" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Theresa Olson</td>
-                    <td>theresa.olson@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/19.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #19</td>
+                    <td>Model #20</td>
+                    <td class="text-right">$50.00</td>
+                    <td class="text-right">320</td>
                     <td><span class="label label-danger">Disabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -665,11 +655,12 @@
                         <label for="product-20" class="pl-0">&nbsp;</label>
                       </div>
                     </td>
-                    <td>Helen Rose</td>
-                    <td>helen.rose@gmail.com</td>
-                    <td>Default</td>
+                    <td class="text-center"><img src="static/build/images/products/20.jpg" width="50" alt="" class="img-thumbnail img-responsive"></td>
+                    <td>Example Product #20</td>
+                    <td>Model #18</td>
+                    <td class="text-right">$480.00</td>
+                    <td class="text-right">180</td>
                     <td><span class="label label-success">Enabled</span></td>
-                    <td>04/18/2016</td>
                     <td class="text-center">
                       <div role="group" aria-label="Basic example" class="btn-group btn-group-sm">
                         <button type="button" class="btn btn-outline btn-primary"><i class="ti-eye"></i></button>
@@ -697,7 +688,7 @@
           <div id="chat" role="tabpanel" class="tab-pane fade in active">
             <form>
               <div class="form-group has-feedback">
-{#                <input type="text" aria-describedby="inputChatSearch" placeholder="Chat withstatic." class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputChatSearch" class="sr-only">(default)</span>#}
+                <input type="text" aria-describedby="inputChatSearch" placeholder="Chat withstatic." class="form-control rounded"><span aria-hidden="true" class="ti-search form-control-feedback"></span><span id="inputChatSearch" class="sr-only">(default)</span>
               </div>
             </form>
             <ul class="chat-list mb-0 fs-12 media-list">
@@ -989,13 +980,9 @@
     <script type="text/javascript" src="static/plugins/datatables.net-colreorder/js/dataTables.colReorder.min.js"></script>
     <script type="text/javascript" src="static/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script type="text/javascript" src="static/plugins/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <!-- MomentJS-->
-    <script type="text/javascript" src="static/plugins/moment/min/moment.min.js"></script>
-    <!-- Bootstrap Date Range Picker-->
-    <script type="text/javascript" src="static/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
     <!-- Custom JS-->
     <script type="text/javascript" src="static/build/js/fourth-layout/app.js"></script>
     <script type="text/javascript" src="static/build/js/fourth-layout/demo.js"></script>
-    <script type="text/javascript" src="static/build/js/page-content/e-commerce/customer-list.js"></script>
+    <script type="text/javascript" src="static/build/js/page-content/e-commerce/product-list.js"></script>
   </body>
 </html>

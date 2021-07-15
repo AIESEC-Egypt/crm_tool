@@ -24,11 +24,16 @@ urlpatterns = [
     path('', home, name='home'),
     path('profile.html', profile, name='profile'),
     path('index.html', home, name='home'),
-    path('customer.html', customer, name='customer'),
+    path('customer-list.html', customer, name='customer'),
     path('index.html', ec, name='ec'),
-    path(r'login.html', user_login_view),
+    path(r'login.htmorl', user_login_view),
     path(r'logout.html', logoutt),
-
+    path('edit-customer.html', edit_customer),
+    path('edit-order.html', edit_order),
+    path('edit-product.html', edit_product),
+    path('invoice.html', invoice),
+    path('order-list.html', order_list),
+    path('product-list.html', product_list),
     path('customers/customers_create.html', customers_create_view, name="customer")
     # path('calendar', calender, name='calendar')
 ]
