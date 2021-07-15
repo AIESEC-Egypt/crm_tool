@@ -10,11 +10,16 @@ from django.contrib.auth import(
 	login,
 	logout,
 	)
+from django.contrib.auth import logout
 
 
 # Create your views here.
+
 def home(request):
-    return render(request, 'index.html')
+    if request.user.is_authenticated:
+        return render(request, 'index.html')
+    else:
+        return redirect("/login.html")
 
 # def calender(request):
 #     return render(request, 'calendar.html')
@@ -28,8 +33,6 @@ def ec(request):
 def customer(request):
     return render(request,'customer-list.html')
 
-def login(request):
-    return render(request,'login.html')
 
 def customers_create_view(request):
     form = CustomersForms(request.POST or None)
@@ -51,3 +54,7 @@ def user_login_view(request):
         login(request, user)
         return redirect("/index.html")
     return render(request, "login.html", {"form": form})
+
+def logoutt(request):
+    logout(request)
+    return redirect("index.html");

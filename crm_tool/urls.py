@@ -26,8 +26,9 @@ urlpatterns = [
     path('index.html', home, name='home'),
     path('customer.html', customer, name='customer'),
     path('index.html', ec, name='ec'),
-    path('login.html', login, name='login'),
-    path('login.html', user_login_view, name="auth"),
+    path(r'login.html', user_login_view),
+    path(r'logout.html', logoutt),
+
     path('customers/customers_create.html', customers_create_view, name="customer")
     # path('calendar', calender, name='calendar')
 ]

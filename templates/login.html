@@ -29,25 +29,29 @@
       <div class="page-content">
         <div class="logo"><img src="static/build/images/logo/logo-sm-light.png" alt="" width="80"></div>
 
-          <form method="POST" action="login">{% csrf_token %}
+<form method="POST" action="">{% csrf_token %}
                 {{ form|crispy }}
-              <div class="form-group">
-            <div class="col-xs-12">
-              <input id="username" type="text" placeholder="Username" class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-xs-12">
-              <input id="password" type="password" placeholder="Password" class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-xs-12">
-
-            </div>
-          </div>
-            <button type="login" class="btn-lg btn btn-primary btn-rounded btn-block">Sign in</button>
+            <button type="submit" class="btn-lg btn btn-primary btn-rounded btn-block">Sign in</button>
           </form>
+{#          <form method="POST" action="">{% csrf_token %}#}
+{#                {{ form|crispy }}#}
+{#              <div class="form-group">#}
+{#            <div class="col-xs-12">#}
+{#              <input id="username" type="text" placeholder="Username" class="form-control">#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <div class="col-xs-12">#}
+{#              <input id="password" type="password" placeholder="Password" class="form-control">#}
+{#            </div>#}
+{#          </div>#}
+{#          <div class="form-group">#}
+{#            <div class="col-xs-12">#}
+{##}
+{#            </div>#}
+{#          </div>#}
+{#            <button type="login" class="btn-lg btn btn-primary btn-rounded btn-block">Sign in</button>#}
+{#          </form>#}
 {#          <form method="POST" action="" class="form-horizontal">{% csrf_token %}#}
 {#          <div class="form-group">#}
 {#            <div class="col-xs-12">#}
@@ -71,20 +75,7 @@
 
       </div>
     </div>
-    <!-- Demo Settings start-->
-{#    <div class="setting closed"><a href="javascript:;" class="setting-toggle fs-16"><i class="ti-palette text-white"></i></a>#}
-      <h5 class="fs-16 mt-0 mb-20 text-white">Background Images</h5>
-      <ul class="list-inline">
-        <li><a href="javascript:;" data-bg="14.jpg" class="inline-block body-bg"><img src="static/build/images/thumbnails/14.jpg" width="60" alt="" class="img-rounded"></a></li>
-        <li><a href="javascript:;" data-bg="15.jpg" class="inline-block body-bg"><img src="static/build/images/thumbnails/15.jpg" width="60" alt="" class="img-rounded"></a></li>
-        <li><a href="javascript:;" data-bg="16.jpg" class="inline-block body-bg"><img src="static/build/images/thumbnails/16.jpg" width="60" alt="" class="img-rounded"></a></li>
-      </ul>
-      <ul class="list-inline mb-0">
-        <li><a href="javascript:;" data-bg="17.jpg" class="inline-block body-bg"><img src="static/build/images/thumbnails/17.jpg" width="60" alt="" class="img-rounded"></a></li>
-        <li><a href="javascript:;" data-bg="18.jpg" class="inline-block body-bg"><img src="static/build/images/thumbnails/18.jpg" width="60" alt="" class="img-rounded"></a></li>
-        <li><a href="javascript:;" data-bg="19.jpg" class="inline-block body-bg"><img src="static/build/images/thumbnails/19.jpg" width="60" alt="" class="img-rounded"></a></li>
-      </ul>
-    </div>
+
     <!-- Demo Settings end-->
     <!-- jQuery-->
     <script type="text/javascript" src="static/plugins/jquery/dist/jquery.min.js"></script>
